@@ -1,0 +1,13 @@
+.ingredient {
+  min-height: 100px;
+  height: auto;
+  min-width: 200px;
+  border: solid 2px #F63471;
+  padding: 30px;
+  border-radius: 15% 10%;
+  margin: 20px;
+}
+
+.recette {
+  display: flex;
+}
