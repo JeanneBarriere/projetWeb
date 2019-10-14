@@ -1,11 +1,11 @@
 @font-face {/* Définition d'une nouvelle police nommée CAC Champagne */
     font-family: 'Aaargh';
-    src: url("polices/Aaargh-webfont.eot") format('eot'),
-         url('polices/Aaargh-webfont.woff') format('woff'),
-         url('polices/Aaargh-webfont.ttf') format('truetype'),
-         url('polices/Aaargh-webfont.svg') format('svg');
+    src: url("font/Aaargh-webfont.eot") format('eot'),
+         url('font/Aaargh-webfont.woff') format('woff'),
+         url('font/Aaargh-webfont.ttf') format('truetype'),
+         url('font/Aaargh-webfont.svg') format('svg');
     font-family: 'Amatic';
-    src: url('polices/AmaticSC-Regular.ttf') format('truetype');}
+    src: url('font/AmaticSC-Regular.ttf') format('truetype');}
 
 
 html, body {
