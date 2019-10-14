@@ -25,3 +25,4 @@ Si vous avez installé nodemon, au lieu d'utiliser node index.js, lancez votre p
 
 nodemon index.js
 De cette façon, le serveur se relancera automatiquement lorsque vous sauvegarderez vos fichiers, et vous pourrez ainsi voir directement les changements*/
+/*npm install -g nodemon --save-dev*/
