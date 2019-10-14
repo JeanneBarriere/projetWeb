@@ -1,0 +1,186 @@
+
+
+.Andy { /* Grand carré qui contient les 9 petits carrés */
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.row { /* Chaque ligne contient 3 petits carrés */
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+#box1 {
+	height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box1:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url("../images/logoCupcakebbis.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box2 {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box2:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box3 {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box3:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box4 {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box4:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box5 {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box5:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box6 {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box6:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+#box7 {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box7:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+#box8 {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box8:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+#box9 {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#box9:hover {
+  height: 100px;
+  width: 100px;
+  background-image: url(logoCupcake.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
