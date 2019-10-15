@@ -1,4 +1,4 @@
-body {
+.recette {
 
 	display: flex;
 	flex-flow: column nowrap;
@@ -16,26 +16,47 @@ body {
 	align-items: center;
 	align-content: center;
 
-	height: 250px;
+	height: 300px;
 
 }
 
 #photo {
 
-	width: 250px;
-	height: 250px;
+	box-sizing: border-box;
+	margin: 10px 10px 10px 10px;
+
+	width: 300px;
+	height: 300px;
 
 }
 
 #general {
 
+	box-sizing: border-box;
+
+	margin: 10px 10px 10px 10px;
+
 	background: Pink;
+	
+	height: 300px;
+
+}
+
+#general p {
+
+	margin: 10px 10px 10px 10px;
 
 }
 
 #middle {
 
-	min-height: 300px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
+	min-height: 400px;
 
 }
 
@@ -50,10 +71,22 @@ body {
   margin: 20px;
 
   background: Pink;
+
 }
 
 .etape {
 
   display: flex;
   
+}
+
+#bottom {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
+
 }
