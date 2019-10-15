@@ -35,6 +35,12 @@ body {
 
 #middle {
 
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
 	min-height: 300px;
 
 }
@@ -50,10 +56,22 @@ body {
   margin: 20px;
 
   background: Pink;
+
 }
 
 .etape {
 
   display: flex;
   
+}
+
+#bottom {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
+
 }
