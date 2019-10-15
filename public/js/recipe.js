@@ -1,11 +1,12 @@
 function color(id){
 
-	for (var i=0; i< id; i++){
+	for (var i=1; i<= id; i++){
 
-		var element = document.getElementById(id+"."+row);
+		var element = document.getElementById(i);
 		element.classList.remove("empty");
-		element.classList.add(player);
-		
+		element.classList.add("filled");
+		element.innerHTML = "<i class="fas fa-star"></i>";
+
 	}
 
 }
