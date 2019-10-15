@@ -30,6 +30,7 @@ header {
   box-shadow: 0px 1px 3px #EFE9EE;
   z-index: 10;
   position: relative;
+  font-size: 15px;
 }
 
 header h1 {
@@ -103,11 +104,11 @@ header ul {
 
 
 article {
-height: 80%;
+height: 100%;
 margin: 0% 10% 0% 10%;
 align-self: center;
 background-color: white;
-z-index: 5;
+z-index: 4;
 position: relative;
 box-shadow: 1px 0px 3px #EFE9EE, -1px 0px 3px #EFE9EE;
 padding: 20px;
