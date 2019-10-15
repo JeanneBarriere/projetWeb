@@ -1,7 +1,5 @@
 
-
 .Andy { /* Grand carré qui contient les 9 petits carrés */
-
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -34,88 +32,62 @@
   width: 200px;
 	margin : 10px;
 	border-radius: 1em;
-	transition: background-image 0.15s, transform 0.3s ;
+	transition: background-image 0.15s, transform 0.3s , opacity 0.15s;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+	opacity: 0.7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Aaargh';
+	text-decoration: none;
+}
+
+.box {
+	text-decoration:none;
+	font: ;
+	color : red;
 }
 
 .box:hover{
-	transition: background-image 0.15s, transform 0.3s ;
+	transition: background-image 0.15s, transform 0.3s, opacity 0.15s;
+	opacity: 1;
 	transform: scale(1.05);
 }
 #box1 {
-  background-image: url("../images/tarteFraiseG.jpg");
-}
-
-#box1:hover {
   background-image: url("../images/tarteFraise.jpg");
 }
 
-#box2 {
-  background-image: url("../images/cookiesG.jpg");
-}
 
-#box2:hover {
+#box2 {
   background-image: url("../images/cookies.jpg");
 }
 
 #box3 {
-  background-image: url("../images/chocolatG.jpg");
-}
-
-#box3:hover {
   background-image: url("../images/chocolat.jpg");
 }
 
 #box4 {
-  background-image: url("../images/glaceG.jpg");
-}
-
-#box4:hover {
   background-image: url("../images/glace.jpg");
 }
 
 #box5 {
-  background-image: url("../images/macaronsG.jpeg");
-}
-
-#box5:hover {
   background-image: url("../images/macarons.jpeg");
 }
 
 #box6 {
-  background-image: url("../images/entremetG.jpg");
-}
-
-#box6:hover {
   background-image: url("../images/entremet.jpg");
 }
 
-
 #box7 {
-  background-image: url("../images/cakeG.jpg");
-}
-
-#box7:hover {
   background-image: url("../images/cake.jpg");
 }
 
-
 #box8 {
-  background-image: url("../images/biscuitsG.jpg");
-
-}
-
-#box8:hover {
   background-image: url("../images/biscuits.jpg");
 }
 
-
 #box9 {
-  background-image: url("../images/smoothieG.jpg");
-}
-
-#box9:hover {
   background-image: url("../images/smoothie.jpg");
 }
