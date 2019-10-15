@@ -1,4 +1,46 @@
+body {
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
+}
+
+#top {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
+	height: 250px;
+
+}
+
+#photo {
+
+	width: 250px;
+	height: 250px;
+
+}
+
+#general {
+
+	background: Pink;
+
+}
+
+#middle {
+
+	min-height: 300px;
+
+}
+
 .ingredient {
+
   min-height: 100px;
   height: auto;
   min-width: 200px;
@@ -6,8 +48,12 @@
   padding: 30px;
   border-radius: 15% 10%;
   margin: 20px;
+
+  background: Pink;
 }
 
-.recette {
+.etape {
+
   display: flex;
+  
 }
