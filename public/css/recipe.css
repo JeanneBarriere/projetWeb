@@ -32,7 +32,11 @@
 
 #general {
 
-	box-sizing: border-box;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
 
 	margin: 10px 10px 10px 10px;
 
@@ -46,6 +50,17 @@
 
 	margin: 10px 10px 10px 10px;
 
+}
+
+.rating {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+
+	box-sizing: border-box;
 }
 
 #middle {
