@@ -25,16 +25,15 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	width: 100%;
 }
 
 #box1 {
 	height: 200px;
   width: 200px;
   background-image: url("../images/tarteFraiseG.jpg");
-	transition: background-image 0.5s ;
+	transition: background-image 0.5s, transform 1s ;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -44,7 +43,8 @@
 #box1:hover {
   height: 200px;
   width: 200px;
-	transition: background-image 0.5s ; /* Active la transition sur background-color */
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
   background-image: url("../images/tarteFraise.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -52,148 +52,172 @@
 }
 
 #box2 {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+  background-image: url("../images/cookiesG.jpg");
+	transition: background-image 0.5s, transform 1s ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box2:hover {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
+  background-image: url("../images/cookies.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box3 {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+  background-image: url("../images/chocolatG.jpg");
+	transition: background-image 0.5s, transform 1s ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box3:hover {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
+  background-image: url("../images/chocolat.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box4 {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+  background-image: url("../images/glaceG.jpg");
+	transition: background-image 0.5s, transform 1s ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box4:hover {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
+  background-image: url("../images/glace.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box5 {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+  background-image: url("../images/macaronsG.jpeg");
+	transition: background-image 0.5s, transform 1s ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box5:hover {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
+  background-image: url("../images/macarons.jpeg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box6 {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+  background-image: url("../images/entremetG.jpg");
+	transition: background-image 0.5s, transform 1s ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box6:hover {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
+  background-image: url("../images/entremet.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 
 #box7 {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+  background-image: url("../images/cakeG.jpg");
+	transition: background-image 0.5s, transform 1s ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box7:hover {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
+  background-image: url("../images/cake.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 
 #box8 {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+  background-image: url("../images/biscuitsG.jpg");
+	transition: background-image 0.5s, transform 1s ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box8:hover {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
+  background-image: url("../images/biscuits.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 
 #box9 {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+  background-image: url("../images/smoothieG.jpg");
+	transition: background-image 0.5s, transform 1s ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #box9:hover {
-  height: 100px;
-  width: 100px;
-  background-image: url(logoCupcake.png);
-  background-size: contain;
+	height: 200px;
+  width: 200px;
+	transition: background-image 0.5s, transform 1s;
+	transform: scale(1.1);
+  background-image: url("../images/smoothie.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
