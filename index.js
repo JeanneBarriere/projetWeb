@@ -11,6 +11,10 @@ app.engine('hbs', hbs({
 }));
 app.set('view engine', 'hbs');
 
+app.get('/recette', function (req, res) {
+  res.sendFile(__dirname+"/public/recipe.html");
+  });
+
 app.get('/*', function (req, res) {
   res.sendStatus(404);
 })
