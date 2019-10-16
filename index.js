@@ -11,6 +11,13 @@ app.engine('hbs', hbs({
 }));
 app.set('view engine', 'hbs');
 
+app.get('/index', function (req, res) {
+  let data = {
+    title: 'Index',
+  }
+  res.render('home.hbs', data);
+});
+
 app.get('/recipe.html', function (req, res) {
   res.sendFile(__dirname+"/public/recipe.html");
   });
