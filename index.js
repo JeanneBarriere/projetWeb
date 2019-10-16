@@ -15,7 +15,7 @@ app.get('', function (req, res) {
   let data = {
     title: 'Index',
   }
-  res.render('index.hbs', data);
+  res.render('home.hbs', data);
 });
 
 app.get('/index', function (req, res) {
