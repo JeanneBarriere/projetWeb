@@ -18,8 +18,26 @@
 	box-shadow: 0px 3px 3px #EFE9EE;
 }
 
-.row { /* Chaque ligne contient 3 petits carrés */
+.capsule {
+	height: 200px;
+  width: 200px;
+	border-radius: 0.5em;
+	overflow:hidden;
+  display:block;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+}
 
+.capsule a{
+	text-decoration: none;
+	text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
+	font-family: 'deliusunicase-bold';
+	font-size: 1.5em;
+	color : #F63471;
+}
+
+.row { /* Chaque ligne contient 3 petits carrés */
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -30,24 +48,14 @@
 .box {
 	height: 200px;
   width: 200px;
-	margin : 10px;
-	border-radius: 1em;
 	transition: background-image 0.15s, transform 0.3s , opacity 0.15s;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 	opacity: 0.7;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
-	font-family: 'Aaargh';
-	text-decoration: none;
-}
-
-.box {
-	text-decoration:none;
-	font: ;
-	color : red;
 }
 
 .box:hover{

@@ -1,0 +1,47 @@
+#menu-deroulant, #menu-deroulant ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+}
+#menu-deroulant {
+    text-align: center;
+}
+#menu-deroulant li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+}
+
+#menu-deroulant a {
+  color : #F63471;
+  text-decoration: none;
+  display: inline-block;
+
+  margin-left: 20px;
+  border-bottom: solid 2px white;
+  background-color: white;
+}
+
+#menu-deroulant a:hover{
+  border-bottom: solid 2px #F63471;
+}
+#menu-deroulant ul {
+    position: absolute;
+    left: -999em;
+    z-index: 1000;
+    background-color : white;
+    padding-left: 0px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    display: flex;
+}
+#menu-deroulant li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
+    flex-direction: column;
+    height: auto;
+    border-bottom: solid 2px #F63471;
+    align-items: flex-start;
+    font-size: 15px;
+}

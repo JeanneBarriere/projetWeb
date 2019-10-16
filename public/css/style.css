@@ -7,6 +7,12 @@
 @font-face {
     font-family: 'Amatic';
     src: url('font/AmaticSC-Regular.ttf') format('truetype');}
+@font-face {
+    font-family: 'Gloria';
+    src: url('font/GloriaHallelujah.ttf') format('truetype');}
+@font-face {
+    font-family: 'deliusunicase-bold';
+    src: url('font/deliusunicase-bold.ttf') format('truetype');}
 
 
 html, body {
@@ -31,7 +37,7 @@ header {
   box-shadow: 0px 1px 3px #EFE9EE;
   z-index: 10;
   position: relative;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 header h1 {
@@ -57,26 +63,10 @@ header ul {
   font-size: 1.2em;
 }
 
-#menu {
-  height: 100%;
-}
-
-
-#menu a{
-  color : #F63471;
-  text-decoration: none;
-  display: inline-block;
-  line-height: 30px;
+.search{
+  color :#F63471;
+  align-self: center;
   margin-left: 20px;
-  border-bottom: solid 2px white;
-}
-
-#menu a:hover{
-  color : #F63471;
-  text-decoration: none;
-  line-height: 30px;
-  margin-left: 20px;
-  border-bottom: solid 2px #F63471;
 }
 
 #connexion{
@@ -105,16 +95,19 @@ header ul {
 
 
 article {
-margin: 0% 10% 0% 10%;
-align-self: center;
-background-color: white;
-z-index: 4;
-position: relative;
-box-shadow: 1px 0px 3px #EFE9EE, -1px 0px 3px #EFE9EE;
-padding: 20px;
-color : #474747;
+  margin: 0% 10% 0% 10%;
+  align-self: center;
+  background-color: white;
+  z-index: 4;
+  position: relative;
+  box-shadow: 1px 0px 3px #EFE9EE, -1px 0px 3px #EFE9EE;
+  padding: 20px;
+  color : #474747;
 }
 
+.text{
+  font-size: 1.5em;
+}
 
 nav {
   display: flex;
