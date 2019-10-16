@@ -13,8 +13,14 @@ hr {
   	color: #F63471;	
   	box-shadow: 0px 0px 0px #6E3E28;
 
+}
+
+article{
+
+	background: #fffff7;
 
 }
+
 
 .recette {
 
@@ -34,7 +40,7 @@ hr {
 	align-items: center;
 	align-content: center;
 
-	height: 300px;
+	height: 350px;
 
 }
 
@@ -58,11 +64,17 @@ hr {
 	align-items: flex-start;
 	align-content: flex-start;
 
+	box-sizing: border-box;
 	border-radius: 3%;
 
 	margin: 10px 10px 10px 10px;
+	border: solid 3px #F63471;
 
-	background: #af75a4;
+
+
+	/*background: #99093b; */
+
+
 	
 	height: 300px;
 
@@ -103,7 +115,7 @@ hr {
 }
 
 .filled {
-	box-shadow:2px 2px 2px 1px #6E3E28; ;
+	box-shadow:2px 2px 2px 1px black;
 	color: Gold;
 
 	height: 20px;
@@ -115,32 +127,62 @@ hr {
 
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	align-content: center;
 
-	min-height: 400px;
+	height: 400px;
 
 }
 
-.ingredient {
+#ingredient {
 
-  min-height: 100px;
-  height: auto;
-  min-width: 200px;
-  border: solid 2px #F63471;
-  padding: 30px;
-  border-radius: 15% 10%;
-  margin: 20px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
 
-  background: Pink;
+	box-sizing: border-box;
+
+	border-radius: 3%;
+
+	margin: 10px 10px 10px 10px;
+
+	background: #af75a4;
+	
+	height: 300px;
+	width: 300px;
+
+}
+
+#ingredient p {
+
+	margin: 10px 10px 10px 10px;
 
 }
 
 .etape {
 
-  display: flex;
+ 	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+
+	border-radius: 3%;
+
+	margin: 10px 10px 10px 10px;
+
+	background: pink;
+
   
+}
+
+.etape p {
+
+	margin: 10px 10px 10px 10px;
+
 }
 
 #bottom {
@@ -153,3 +195,5 @@ hr {
 
 
 }
+
+
