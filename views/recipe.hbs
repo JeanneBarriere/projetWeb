@@ -1,71 +1,124 @@
 <body>
-<article>
-    <h1> Gâteau au chocolat </h1>
-
-    <hr>
-    <br>
-    <br>
-
-    <div class="recette">
-      <div id="top"> <!-- le haut de la page-->
-
-        <img src="https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg" alt="imagerecette" id="photo"> </img>
-
-        <aside id="general">
-
-          <!-- the rating!!!-->
-          <div class="rating">
-
-            <p> Note :</p>
-
-              <div class="empty" name="rating" id="s1" onclick="clickstar(1);"><i class="far fa-star"></i></div>
-              <div class="empty" name="rating" id="s2" onclick="clickstar(2);"><i class="far fa-star"></i></div>
-              <div class="empty" name="rating" id="s3" onclick="clickstar(3);"><i class="far fa-star"></i></div>
-              <div class="empty" name="rating" id="s4" onclick="clickstar(4);"><i class="far fa-star"></i></div>
-              <div class="empty" name="rating" id="s5" onclick="clickstar(5);"><i class="far fa-star"></i></div>
-
-            <!-- <div class="filled" name="rating" id="star1"><i class="fas fa-star"></i></div>
-            <div class="filled" name="rating" id="star2"><i class="fas fa-star"></i></div>
-            <div class="filled" name="rating" id="star3"><i class="fas fa-star"></i></div>
-            <div class="filled" name="rating" id="star4"><i class="fas fa-star"></i></div>
-            <div class="filled" name="rating" id="star5"><i class="fas fa-star"></i></div> -->
-
-          </div>
 
 
+  <header>
+    <img src="images\logoCupcake.png" alt="logoCupcake" title="logoCupcake" class="logo">
+    <h1>
+      CooKieJar
+    </h1>
+    <ul id="menu-deroulant">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="recipe.html">Recettes  <i class="fas fa-sort-down"></i></a>
+          <ul>
+            <li><a href="#">Tartes</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Chocolat</a></li>
+            <li><a href="#">Glaces</a></li>
+            <li><a href="#">Macarons</a></li>
+            <li><a href="#">Entremets</a></li>
+            <li><a href="#">Cakes</a></li>
+            <li><a href="#">Biscuits</a></li>
+            <li><a href="#">Smoothies</a></li>
+          </ul>
+      </li>
+      <li><a href="#">Idées & Conseils</a></li>
+      <li><a href="#">Forum</a></li>
+    </ul>
 
-          <p>
-            ID GENERAL Verum ad istam omnem orationem brevis est defensio. Nam quoad aetas M. Caeli dare potuit isti suspicioni locum, fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita. Qui ut huic virilem togam deditšnihil dicam hoc loco de me; tantum sit, quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse deductum; nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in M. Crassi castissima domo, cum artibus honestissimis erudiretur. Verum ad istam omnem orationem brevis est defensio.
+    <form class="search" action="index.html" method="post">
+      <label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
+    </form>
+
+    <ul id="connexion">
+      <li><a href="#">Se connecter</a></li>
+      <li><a href="#">S'inscrire</a></li>
+    </ul>
+
+  </header>
+
+  <article>
+      <h1> Gâteau au chocolat </h1>
+
+      <hr>
+      <br>
+      <br>
+
+      <div class="recette">
+        <div id="top"> <!-- le haut de la page-->
+
+          <img src="./images/chocolat.jpg" alt="imagerecette" id="photo"> </img>
+
+          <aside id="general">
+
+            <!-- the rating!!!-->
+            <div class="rating">
+
+              <p> Note :</p>
+
+                <div class="empty" name="rating" id="s1" onclick="clickstar(1);"><i class="far fa-star"></i></div>
+                <div class="empty" name="rating" id="s2" onclick="clickstar(2);"><i class="far fa-star"></i></div>
+                <div class="empty" name="rating" id="s3" onclick="clickstar(3);"><i class="far fa-star"></i></div>
+                <div class="empty" name="rating" id="s4" onclick="clickstar(4);"><i class="far fa-star"></i></div>
+                <div class="empty" name="rating" id="s5" onclick="clickstar(5);"><i class="far fa-star"></i></div>
+
+              <!-- <div class="filled" name="rating" id="star1"><i class="fas fa-star"></i></div>
+              <div class="filled" name="rating" id="star2"><i class="fas fa-star"></i></div>
+              <div class="filled" name="rating" id="star3"><i class="fas fa-star"></i></div>
+              <div class="filled" name="rating" id="star4"><i class="fas fa-star"></i></div>
+              <div class="filled" name="rating" id="star5"><i class="fas fa-star"></i></div> -->
+
+            </div>
+
+
+
+            <p>
+              ID GENERAL Verum ad istam omnem orationem brevis est defensio. Nam quoad aetas M. Caeli dare potuit isti suspicioni locum, fuit primum ipsius pudore, deinde etiam patris diligentia disciplinaque munita. Qui ut huic virilem togam deditšnihil dicam hoc loco de me; tantum sit, quantum vos existimatis; hoc dicam, hunc a patre continuo ad me esse deductum; nemo hunc M. Caelium in illo aetatis flore vidit nisi aut cum patre aut mecum aut in M. Crassi castissima domo, cum artibus honestissimis erudiretur. Verum ad istam omnem orationem brevis est defensio.
+            </p>
+
+          </aside>
+        </div>
+
+
+
+    <div id="middle"> <!-- le milieu de la page-->
+
+        <aside id="ingredient">
+
+          <p>Ingrédients : <br>
+
+            <ul>
+              <li> Farine </li>
+              <li> Sucre </li>
+              <li> beurre </li>
+            </ul>
+
           </p>
 
-        </aside>
-      </div>
+
+         </aside>
 
 
+        <div class="etape">  
+          <p> 
+            Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt. <br>
 
-  <div id="middle"> <!-- le milieu de la page-->
-      <aside id="ingredient">
-        usatoris ulla licet subditicii in his malorum quaerebatur acervis ut saltem specie tenus crimina praescriptis legum committerentur, quod aliquotiens fecere principes saevi: sed quicquid Caesaris implacabilitati sedisset, id velut fas iusque perpensum confestim urgebatur impleri.
+            Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
+          </p>
 
-        Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
-
-
-       </aside>
-
-
-      <div class="etape">  Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt.
-
-      Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
-
-      </div>
-  </div>
-
-
-  <div id="bottom"> <!-- le bas de la page-->
-    <div id="commentaire"> What do you think?!</div>
-  </div>
-
+        </div>
     </div>
 
-</article>
-<body>
+
+    <div id="bottom"> <!-- le bas de la page-->
+      <div id="commentaire"> What do you think?!</div>
+    </div>
+
+      </div>
+
+  </article>
+
+  <footer>
+
+  </footer>
+
+</body>
