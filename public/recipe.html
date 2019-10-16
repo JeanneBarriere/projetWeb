@@ -7,9 +7,11 @@
 	<title> Recettes </title>
 	<link rel="stylesheet" href="css\style.css" />
   <link rel="stylesheet" href="css\recipe.css" />
+  <link rel="stylesheet" href="css\menuDeroulant.css" />
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
   <script src="js/recipe.js"></script>
+
 </head>
 
 <body>
@@ -18,19 +20,35 @@
   <header>
     <img src="images\logoCupcake.png" alt="logoCupcake" title="logoCupcake" class="logo">
     <h1>
-      Patisserie
+      CooKieJar
     </h1>
-		<ul id="menu">
-			<li><a href="index.html">Accueil</a></li>
-			<li><a href="recipe.html">Recettes</a></li>
-			<li><a href="#">Idées & Conseils</a></li>
-			<li><a href="#">Forum</a></li>
-		</ul>
+    <ul id="menu-deroulant">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="recipe.html">Recettes  <i class="fas fa-sort-down"></i></a>
+          <ul>
+            <li><a href="#">Tartes</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Chocolat</a></li>
+            <li><a href="#">Glaces</a></li>
+            <li><a href="#">Macarons</a></li>
+            <li><a href="#">Entremets</a></li>
+            <li><a href="#">Cakes</a></li>
+            <li><a href="#">Biscuits</a></li>
+            <li><a href="#">Smoothies</a></li>
+          </ul>
+      </li>
+      <li><a href="#">Idées & Conseils</a></li>
+      <li><a href="#">Forum</a></li>
+    </ul>
 
-		<ul id="connexion">
-			<li><a href="#">Se connecter</a></li>
-			<li><a href="#">S'inscrire</a></li>
-		</ul>
+    <form class="search" action="index.html" method="post">
+      <label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
+    </form>
+
+    <ul id="connexion">
+      <li><a href="#">Se connecter</a></li>
+      <li><a href="#">S'inscrire</a></li>
+    </ul>
 
   </header>
 
