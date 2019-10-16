@@ -13,6 +13,9 @@
 @font-face {
     font-family: 'deliusunicase-bold';
     src: url('font/deliusunicase-bold.ttf') format('truetype');}
+@font-face {
+    font-family: 'deliusunicase-regular';
+    src: url('font/deliusunicase-regular.ttf') format('truetype');}
 
 
 html, body {
