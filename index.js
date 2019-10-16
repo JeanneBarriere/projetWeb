@@ -22,7 +22,14 @@ app.get('/index', function (req, res) {
   let data = {
     title: 'Index',
   }
-  res.render('home.hbs', data);
+  res.render('index.hbs', data);
+});
+
+app.get('/recipe', function (req, res) {
+  let data = {
+    title: 'Recettes',
+  }
+  res.render('recipe.hbs', data);
 });
 
 app.get('/recipe.html', function (req, res) {
