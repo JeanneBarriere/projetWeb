@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="css\recipe.css" />
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
-	<script src="script.js"></script>
-  <script src="./recipe.js"></script>
+  <script src="js/recipe.js"></script>
 </head>
 
 <body>
@@ -36,7 +35,11 @@
   </header>
 
   <article>
-      <h1> Gâteau au chocolat</h1>
+      <h1> Gâteau au chocolat </h1>
+
+      <hr>
+      <br>
+      <br>
 
       <div class="recette">
         <div id="top"> <!-- le haut de la page-->
@@ -47,13 +50,14 @@
 
             <!-- the rating!!!-->
             <div class="rating">
-              <p> Note :</p>
 
-            	<div class="empty" name="rating" id="s1" onclick="color(id);"><i class="far fa-star"></i></div>
-            	<div class="empty" name="rating" id="s2" onclick="color(id);"><i class="far fa-star"></i></div>
-            	<div class="empty" name="rating" id="s3" onclick="color(id);"><i class="far fa-star"></i></div>
-            	<div class="empty" name="rating" id="s4" onclick="color(id);"><i class="far fa-star"></i></div>
-            	<div class="empty" name="rating" id="s5" onclick="color(id);"><i class="far fa-star"></i></div>
+              <p> Note :</p>
+              
+              	<div class="empty" name="rating" id="s1" onclick="color(1);"><i class="far fa-star"></i></div>
+              	<div class="empty" name="rating" id="s2" onclick="color(2);"><i class="far fa-star"></i></div>
+              	<div class="empty" name="rating" id="s3" onclick="color(3);"><i class="far fa-star"></i></div>
+              	<div class="empty" name="rating" id="s4" onclick="color(4);"><i class="far fa-star"></i></div>
+              	<div class="empty" name="rating" id="s5" onclick="color(5);"><i class="far fa-star"></i></div>
 
               <!-- <div class="filled" name="rating" id="star1"><i class="fas fa-star"></i></div>
               <div class="filled" name="rating" id="star2"><i class="fas fa-star"></i></div>

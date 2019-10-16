@@ -1,3 +1,20 @@
+h1 {
+	color: #6E3E28;
+	font-family: "Amatic";
+	margin: 10px 10px 10px 10px;
+
+}
+
+hr {
+
+	margin: solid green 20px;
+  	border-style: solid;
+  	border-width: 1px; 
+  	color: #F63471;	
+  	box-shadow: 9px 3px 10px #EFE9EE;
+
+}
+
 .recette {
 
 	display: flex;
@@ -25,6 +42,8 @@
 	box-sizing: border-box;
 	margin: 10px 10px 10px 10px;
 
+	border-radius: 3%;
+
 	width: 300px;
 	height: 300px;
 
@@ -38,9 +57,11 @@
 	align-items: flex-start;
 	align-content: flex-start;
 
+	border-radius: 3%;
+
 	margin: 10px 10px 10px 10px;
 
-	background: Pink;
+	background: #af75a4;
 	
 	height: 300px;
 
@@ -57,26 +78,35 @@
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: center;
 	align-content: flex-start;
 
 	box-sizing: border-box;
 }
 
+
+
 .empty {
+
 
 	height: 20px;
 	width: 20px;
-	border: 2px 2px 2px 2px;
-	border-color: green;
-	border-style: solid;
-
+	
 }
 
 .empty:hover {
 
-cursor: pointer;
+	cursor: pointer;
 
+}
+
+.filled {
+
+	color: Gold;
+
+	height: 20px;
+	width: 20px;
+	
 }
 
 #middle {
