@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const app = express();
 
+const connection = require('./db.js');
+
 app.use(express.static('public'));
 
 app.engine('hbs', hbs({
@@ -25,11 +27,33 @@ app.get('/index', function (req, res) {
   res.render('index.hbs', data);
 });
 
+app.get('/listing', function (req, res) {
+
+  let data = {
+    title: 'Cakes',
+  }
+  res.render('listing.hbs', data);
+
+});
+
 app.get('/recipe', function (req, res) {
+
   let data = {
     title: 'Recettes',
   }
   res.render('recipe.hbs', data);
+
+});
+
+app.get('/recipe/:page', function (req, res) {
+
+  console.log(req.params.page);
+
+  let data = {
+    title: 'Recettes',
+  }
+  res.render('recipe.hbs', data);
+
 });
 
 app.get('/recipe.html', function (req, res) {
@@ -43,3 +67,4 @@ app.get('/*', function (req, res) {
 app.listen(3000, function () {
   console.log('Application qui écoute sur le port 3000!');
 })
+
