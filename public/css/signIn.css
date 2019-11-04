@@ -1,0 +1,22 @@
+.signIn {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.signIn h1{
+  align-self: center;
+}
+
+#anniversary{
+  display: flex;
+}
+
+.signIn form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  justify-content: space-between;
+  height: 100%;
+}
