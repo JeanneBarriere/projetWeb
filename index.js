@@ -27,6 +27,15 @@ app.get('/index', function (req, res) {
   res.render('index.hbs', data);
 });
 
+app.get('/signIn', function (req, res) {
+
+  let data = {
+    title: 'Inscription',
+  }
+  res.render('signIn.hbs', data);
+
+});
+
 app.get('/listing', function (req, res) {
 
   let data = {
@@ -67,4 +76,3 @@ app.get('/*', function (req, res) {
 app.listen(3000, function () {
   console.log('Application qui écoute sur le port 3000!');
 })
-
