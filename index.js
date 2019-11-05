@@ -20,6 +20,13 @@ app.get('', function (req, res) {
   res.render('index.hbs', data);
 });
 
+app.get('/confirmedRegistration', function (req, res) {
+  let data = {
+    title: 'Nouvelle inscription',
+  }
+  res.render('confirmedRegistration.hbs', data);
+});
+
 app.get('/index', function (req, res) {
   let data = {
     title: 'Index',
