@@ -18,5 +18,6 @@ form.addEventListener("submit", function (e) {
     var day = form.elements.day.value;
     var month = form.elements.month.value;*/
      // Annulation de l'envoi des données
-     form.submit();
+    // form.submit();
+     document.location.href="/confirmedRegistration.hbs"
 });
