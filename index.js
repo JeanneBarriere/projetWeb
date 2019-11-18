@@ -38,7 +38,13 @@ app.get('/signIn', function (req, res) {
 
 app.get('/listing', function (req, res) {
   
-}
+    let data = {
+      title: 'Cakes',
+    }
+
+    res.render('listing.hbs', data);
+
+});
 
 app.get('/listing/:type', function (req, res) {
 
