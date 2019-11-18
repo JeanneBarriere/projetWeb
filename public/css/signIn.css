@@ -2,7 +2,9 @@
   background-color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100%;
+    align-items:center;
 }
 
 .signIn h1{

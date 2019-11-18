@@ -3,6 +3,7 @@
  <head>
    <meta charset="utf-8">
    <title>{{ title }}</title>
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/font.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -10,8 +11,10 @@
     <link rel="stylesheet" href="css/recipe.css" />
     <link rel="stylesheet" href="css/listing.css" />
     <link rel="stylesheet" href="css/signIn.css" />
+
+    <script src="js/ajax.js"></script>
     <script src="js/recipe.js"></script>
-    <script src="js/signIn.js"></script>
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
 
@@ -41,9 +44,9 @@
  			<li><a href="#">Forum</a></li>
  		</ul>
 
- 		<form class="search" action="index.html" method="post">
+ 	<div class="search">
  			<label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
- 		</form>
+ 	</div>
 
  		<ul id="connexion">
  			<li><a href="#">Se connecter</a></li>
@@ -55,5 +58,8 @@
    <footer>
 
    </footer>
+
+     <script src="js/signIn.js"></script>
+
  </body>
 </html>
