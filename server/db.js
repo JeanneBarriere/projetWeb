@@ -53,36 +53,33 @@ const pwd = encodeURIComponent(__PASSWORD__);
 const project_name = 'project' + project_number;
 const user_name = 'user_project_' + project_number;
 const mongoose = require('mongoose');
-const uri = "mongodb+srv://" + user_name + ":" + pwd
-		+ "@dant-kkn0r.mongodb.net/"
-		+ project_name + "?retryWrites=true&w=majority";
+const uri = "mongodb+srv://chifaawehbe:"+ pwd + "@chifaa-vz6hq.mongodb.net/test?retryWrites=true&w=majority";
+	//	+ "@dant-kkn0r.mongodb.net/"
+		//+ project_name + "?retryWrites=true&w=majority";
 //
 
-const docSchema = new mongoose.Schema({
-	name: String,
-	author: String,
-	tags: [ String ],
-	data: { type: Date, default: Date.now },
-	isPublished: Boolean
+const userSchema = new mongoose.Schema({
+	firstName: String,
 });
-const Doc = mongoose.model('Doc', docSchema);
+const User = mongoose.model('User', userSchema);
 
-async function createDoc() {
-	const doc = new Doc({
-		name: 'Document test',
+async function createUser(userData) {
+	const user = new User({
+		name: 'user test',
+		userData.firstName : 
 		author: user_name,
-		tags: ['test'],
+		tags: ['User test'],
 		isPublished: true
 	})
 
-	const result = await doc.save();
+	const result = await user.save();
 	console.log(result);
-}
+}*/
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(function() {
 		console.log('now connected to mongodb!');
-		createDoc();
+		//createDoc();
 	})
 	.catch(function (err) {
 		console.log ("Erreur lors de la connection à mongodb : ", err);
