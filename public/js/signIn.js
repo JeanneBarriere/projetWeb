@@ -13,15 +13,14 @@ form.addEventListener("submit", function (e) {
     var firstName = form.elements.firstName.value;
     var lastName = form.elements.lastName.value;
     var pseudo = form.elements.pseudo.value;
-    var password1 = form.elements.password1.value;
-    var password2 = form.elements.password2.value;
+    var password = form.elements.password1.value;
     var mail = form.elements.mail.value;
     var day = form.elements.day.value;
     var month = form.elements.month.value;
      // Annulation de l'envoi des données
     // form.submit();
     ajax.post('/createUser',
-    {firstName,lastName,pseudo,password1},
+    {firstName,lastName,pseudo,password,mail,day,month},
     function(response){
       alert("utilisateur créé");
       document.location.href="/confirmedRegistration";

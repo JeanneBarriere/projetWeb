@@ -1,8 +1,11 @@
 const express = require('express');
 const hbs = require('express-handlebars');
 const app = express();
+const db = require('./server/db.js')
 
 const connection = require('./server/db.js');
+let users = await db.getUsers();
+console.log(users);
 app.use(express.urlencoded({extended: true}));
 
 app.use(express.static('public'));
@@ -16,6 +19,7 @@ app.set('view engine', 'hbs');
 
 app.post('/createUser',function (req, res){
   console.log(req.body.firstName);
+  db.createUser(req.body);
   res.send('success');
 });
 

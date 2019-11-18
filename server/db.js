@@ -44,7 +44,7 @@ module.exports = mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopolo
 	(en remplaçant __votre_mot_de_passe__ par le mot de passe fourni)
 */
 
-const __PASSWORD__ = require('./config/pwd.js');
+const __PASSWORD__ = require('../config/pwd.js');
 const project_number = 0; //Changer ici par votre numéro de projet
 
 // Ne pas changer ces lignes
@@ -60,27 +60,42 @@ const uri = "mongodb+srv://chifaawehbe:"+ pwd + "@chifaa-vz6hq.mongodb.net/test?
 
 const userSchema = new mongoose.Schema({
 	firstName: String,
+	lastName: String,
+	pseudo : String,
+	password : String,
+	mail : String,
+	day : Number,
+	month : Number,
 });
 const User = mongoose.model('User', userSchema);
 
 async function createUser(userData) {
+	console.log("createUser");
 	const user = new User({
-		name: 'user test',
-		userData.firstName : 
-		author: user_name,
-		tags: ['User test'],
-		isPublished: true
+		firstName : userData.firstName,
+		lastName : userData.lastName,
+		pseudo : userData.pseudo,
+		password : userData.password,
+		mail : userData.mail,
+		day : userData.day,
+		month : userData.month,
 	})
-
 	const result = await user.save();
 	console.log(result);
-}*/
+};
+
+async function getUsers(){
+	const allUsers = await User.find();
+  return allUsers;
+}
+
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(function() {
 		console.log('now connected to mongodb!');
-		//createDoc();
 	})
 	.catch(function (err) {
 		console.log ("Erreur lors de la connection à mongodb : ", err);
 	})
+
+	module.exports = {createUser,getUsers};
