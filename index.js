@@ -54,11 +54,36 @@ app.get('/signIn', function (req, res) {
 });
 
 app.get('/listing', function (req, res) {
+  
+    let data = {
+      title: 'Cakes',
+    }
 
-  let data = {
-    title: 'Cakes',
+    res.render('listing.hbs', data);
+
+});
+
+app.get('/listing/:type', function (req, res) {
+
+  let listingArray = ['cakes', 'tartes'];
+  
+  if (listingArray.indexOf(req.params.type) == -1) {
+
+    let data = {
+      title: 'Index',
+    }
+
+    res.render('index.hbs', data);
+
+  } else {
+
+    let data = {
+      title: 'Cakes',
+    }
+
+    res.render('listing.hbs', data);
+
   }
-  res.render('listing.hbs', data);
 
 });
 
