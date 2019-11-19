@@ -2,10 +2,16 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const app = express();
 const db = require('./server/db.js')
-
 const connection = require('./server/db.js');
+
+async function f(){
 let users = await db.getUsers();
-console.log(users);
+//await db.removeUser('5dd27c2abe2dded5c807d4ca');
+console.log('Les utilisateurs :'+users);
+};
+
+f();
+
 app.use(express.urlencoded({extended: true}));
 
 app.use(express.static('public'));
@@ -18,7 +24,7 @@ app.engine('hbs', hbs({
 app.set('view engine', 'hbs');
 
 app.post('/createUser',function (req, res){
-  console.log(req.body.firstName);
+  console.log("utilisateur créé"+req.body.firstName);
   db.createUser(req.body);
   res.send('success');
 });
@@ -45,28 +51,30 @@ app.get('/index', function (req, res) {
 });
 
 app.get('/signIn', function (req, res) {
-
   let data = {
     title: 'Inscription',
   }
   res.render('signIn.hbs', data);
+});
 
+app.get('/LogIn', function (req, res) {
+  let data = {
+    title: 'connexion',
+  }
+  res.render('logIn.hbs', data);
 });
 
 app.get('/listing', function (req, res) {
-  
     let data = {
       title: 'Cakes',
     }
-
     res.render('listing.hbs', data);
-
 });
 
 app.get('/listing/:type', function (req, res) {
 
   let listingArray = ['cakes', 'tartes'];
-  
+
   if (listingArray.indexOf(req.params.type) == -1) {
 
     let data = {

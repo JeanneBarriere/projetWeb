@@ -1,4 +1,4 @@
-.signIn {
+.logIn {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -8,20 +8,21 @@
   color: #6E3E28;
 }
 
-.signIn h1{
+.logIn h1{
   align-self: center;
 }
 
-#anniversary{
+.center{
   display: flex;
+  justify-content: space-around;
 }
 
-.signIn form{
+.logIn form{
   display: flex;
   flex-direction: column;
   width: 300px;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: space-around;
+  height: 50%;
 }
 
 input , select {
@@ -31,8 +32,11 @@ input , select {
  box-shadow:1px 1px 2px #C0C0C0 inset;
  }
 
- input[type = submit]{
+ input[type = submit], input[type = cancel]{
    background-color: #FFF1FF;
+   width: 100px;
+   text-align: center;
+   align-items: center;
  }
 
  input:focus, textarea:focus, select:focus {
