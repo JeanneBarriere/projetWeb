@@ -1,12 +1,14 @@
-<article class="signIn">
-  <h1>Inscription</h1>
+<article class="newRecipe">
+  <div class="formbackground">
 
-  <p>Remplissez les informations ci-dessous pour enregistrer votre recette:</p>
+    <h1>Nouvelle recette</h1>
 
-  <form class="recipeForm" >
-    <label for="title">Titre : </label><input type="text" name="title" id="title">
+    <p>Remplissez les informations ci-dessous pour enregistrer votre recette:</p>
 
-    <p>La catégorie :</p>
+    <form class="recipeForm" >
+      <label for="title">Titre : </label><input type="text" name="title" id="title">
+
+      <p>La catégorie :</p>
       <div id="category">
         <select class="category" name="category" id="category">
           <option value="tartes">tartes</option>
@@ -20,14 +22,15 @@
         </select>
       </div>
 
-    <label for="ingredients">Ingredients </label><input type="text[]" name="ingredients" id="ingredients">
-    <label for="tools">Ustenciles </label><input type="text[]" name="tools" id="tools">
-    <label for="time">Temps de préparation </label><input type="number" name="time" id="time">
-    <label for="backingTime">Temps de cuisson </label><input type="number" name="backingTime" id="backingTime">
-    <label for="backingTime">Temps de cuisson </label><input type="number" name="backingTime" id="backingTime">
-    <textarea name="steps" rows="8" cols="80">Les étapes</textarea>
-      </div>
+      <label for="ingredients">Ingredients </label><input type="text[]" name="ingredients" id="ingredients">
+      <label for="tools">Ustenciles </label><input type="text[]" name="tools" id="tools">
+      <label for="time">Temps de préparation </label><input type="number" name="time" id="time">
+      <label for="backingTime">Temps de cuisson </label><input type="number" name="backingTime" id="backingTime">
+      <label for="backingTime">Temps de cuisson </label><input type="number" name="backingTime" id="backingTime">
+      <textarea name="steps" rows="8" cols="80">Les étapes</textarea>
       <input type="submit" value="Envoyer" >
+    </div>
   </form>
+  </div>
 
 </article>
