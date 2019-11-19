@@ -7,6 +7,7 @@ const user_name = 'user_project_' + project_number;
 const mongoose = require('mongoose');
 const uri = "mongodb+srv://chifaawehbe:"+ pwd + "@chifaa-vz6hq.mongodb.net/test?retryWrites=true&w=majority";
 
+//LES utilisateur
 const userSchema = new mongoose.Schema({
 	firstName: String,
 	lastName: String,
@@ -37,19 +38,46 @@ async function getUsers(){
   return allUsers;
 }
 
-/*async function connect(){
-	const allUsers = await getUsers();
-	for (var i=0; i<allUsers.length; i++){
-		if(allUsers[i].mail == )
-	}
-}*/
-
 async function removeUser(id) {
   const result = await User.deleteOne({_id: id});
   // indicates the number of deleted documents
   console.log("L'utilisateur a été supprimé :"+result);
 }
 
+// LES RECETTES
+const recipeSchema = new mongoose.Schema({
+	title: String,
+	category: String,
+	author: String,
+	rating: Number, //tab
+	time: Number,
+	bakingTime: Number,
+	//image: Data,
+	tools: String,//tab
+	ingredients: String,//tab
+	steps: String,//tab
+	date: Date,
+});
+
+const Recipe = mongoose.model('Recipe', recipeSchema);
+
+async function createRecipe(recipeData) {
+	const recipe = new Recipe({
+	title: recipeData.title,
+	category: recipeData.category,
+	author: recipeData.author,
+	rating: recipeData.rating,
+	time: recipeData.time,
+	bakingTime: recipeData.bakingTime,
+	//image: recipeData.image,
+	tools: recipeData.tools,
+	ingredients: recipeData.ingredients,
+	steps: recipeData.steps,
+	date: recipeData.date,
+	})
+	const result = await recipe.save();
+	console.log(result);
+};
 
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(function() {

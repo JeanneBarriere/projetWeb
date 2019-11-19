@@ -22,7 +22,7 @@
   flex-direction: column;
   width: 300px;
   justify-content: space-around;
-  height: 50%;
+  height: 30%;
 }
 
 input , select {

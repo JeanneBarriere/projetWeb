@@ -1,20 +1,14 @@
 const express = require('express');
 const hbs = require('express-handlebars');
 const app = express();
-const db = require('./server/db.js')
+const db = require('./server/db')
 const connection = require('./server/db.js');
 
-async function f(){
-let users = await db.getUsers();
-//await db.removeUser('5dd27c2abe2dded5c807d4ca');
-console.log('Les utilisateurs :'+users);
-};
-
-f();
-
 app.use(express.urlencoded({extended: true}));
-
 app.use(express.static('public'));
+//app.use('/', require('./server/passport'));
+app.use('/', require('./server/users'));
+
 
 app.engine('hbs', hbs({
   extname: 'hbs',
@@ -23,11 +17,6 @@ app.engine('hbs', hbs({
 }));
 app.set('view engine', 'hbs');
 
-app.post('/createUser',function (req, res){
-  console.log("utilisateur créé"+req.body.firstName);
-  db.createUser(req.body);
-  res.send('success');
-});
 
 app.get('', function (req, res) {
   let data = {
@@ -62,6 +51,13 @@ app.get('/LogIn', function (req, res) {
     title: 'connexion',
   }
   res.render('logIn.hbs', data);
+});
+
+app.get('/newRecipe', function (req, res) {
+  let data = {
+    title: 'Nouvelle recette',
+  }
+  res.render('newRecipe.hbs', data);
 });
 
 app.get('/listing', function (req, res) {
