@@ -87,4 +87,4 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 		console.log ("Erreur lors de la connection à mongodb : ", err);
 	})
 
-	module.exports = {createUser,getUsers,removeUser};
+	module.exports = {createUser,getUsers,removeUser,User};

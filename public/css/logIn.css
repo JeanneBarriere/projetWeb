@@ -1,3 +1,18 @@
+.connect{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items:center;
+  color: #6E3E28;
+  border:1px solid #F63471;
+  border-radius:5px;
+  height: 40%;
+  box-shadow:1px 1px 2px #C0C0C0;
+  padding: 10px;
+  line-height: 20px;
+}
+
 .logIn {
   background-color: white;
   display: flex;
@@ -6,7 +21,10 @@
   height: 100%;
   align-items:center;
   color: #6E3E28;
+  background-image: url("../images/farandole2.jpg");
+  background-size: cover;
 }
+
 
 .logIn h1{
   align-self: center;

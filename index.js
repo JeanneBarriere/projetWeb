@@ -1,14 +1,27 @@
 const express = require('express');
 const hbs = require('express-handlebars');
+const session = require('express-session');
 const app = express();
 const db = require('./server/db')
 const connection = require('./server/db.js');
-
+const passport = require('passport');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
-//app.use('/', require('./server/passport'));
+app.use('/', require('./server/passport'));
 app.use('/', require('./server/users'));
+app.use(session({ secret: 'keyboard cat',resave:true,saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
+
+app.get('/profil', function (req, res) {
+  let data = {
+    title: 'Connexion confirmée',
+  }
+  let user = req.user;
+  console.log('user dans profil:', user);
+  res.render('profil.hbs', {user:user});
+});
 
 app.engine('hbs', hbs({
   extname: 'hbs',
@@ -24,6 +37,7 @@ app.get('', function (req, res) {
   }
   res.render('index.hbs', data);
 });
+
 
 app.get('/confirmedRegistration', function (req, res) {
   let data = {
@@ -92,23 +106,18 @@ app.get('/listing/:type', function (req, res) {
 });
 
 app.get('/recipe', function (req, res) {
-
   let data = {
     title: 'Recettes',
   }
   res.render('recipe.hbs', data);
-
 });
 
 app.get('/recipe/:page', function (req, res) {
-
   console.log(req.params.page);
-
   let data = {
     title: 'Recettes',
   }
   res.render('recipe.hbs', data);
-
 });
 
 app.get('/recipe.html', function (req, res) {
