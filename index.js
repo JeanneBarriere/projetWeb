@@ -87,7 +87,11 @@ app.get('/listing', function (req, res) {
 
 app.get('/listing/:type', function (req, res) {
 
-  let listingArray = ['cakes', 'tartes'];
+  let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cakes', 'biscuits', 'smoothies'];
+
+  let page = req.query.page;
+
+  console.log("listing "+page);
 
   if (listingArray.indexOf(req.params.type) == -1) {
 
@@ -101,7 +105,7 @@ app.get('/listing/:type', function (req, res) {
   } else {
 
     let data = {
-      title: 'Cakes',
+      title: req.params.type,
       user:req.user,
     }
     res.render('listing.hbs', data);
