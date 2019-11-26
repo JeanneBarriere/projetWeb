@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/logIn.css" />
     <script src="/js/ajax.js"></script>
     <script src="/js/recipe.js"></script>
+    <script src="/js/divers.js"></script>
 
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
@@ -41,7 +42,12 @@
  						<li><a href="#">Smoothies</a></li>
  					</ul>
  			</li>
+
+      {{# if user}}
  			<li><a href="/newRecipe">Nouvelle recette</a></li>
+      {{ else }}
+      <li onclick="connectforrecipe()"><a href=#>Nouvelle recette</a></li>
+      {{/if}}
  			<li><a href="#">Forum</a></li>
  		</ul>
 
@@ -49,10 +55,11 @@
  			<label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
  	</div>
 
-  {{# if (user)}}
+  {{# if user}}
     <ul id="connexion">
-      <li><a href="/logIn">{{user.pseudo}}r</a></li>
-      <li><a href="/signIn">{{LogOut}}</a></li>
+      <li><a href="/profil">{{user.pseudo}}</a></li>
+      <li id="logout"><a href=#>LogOut</a></li>
+      <script src="/js/logOut.js"></script>
     </ul>
   {{ else }}
     <ul id="connexion">
@@ -67,7 +74,6 @@
    <footer>
 
    </footer>
-
 
 
  </body>

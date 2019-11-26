@@ -9,7 +9,7 @@ form.addEventListener("submit", async function (e) {
     await ajax.get('/connectUser',
     {password,mail},
     function(response){
-    document.location.href="/profil";
+    document.location.href="/index";
     },
     function(){
       alert('mauvais identifiants 2');
