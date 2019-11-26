@@ -10,6 +10,14 @@ router.post('/createUser', async function (req, res){
   res.send('success');
 });
 
+/// Sers à voir et suprimer utilisateur
+async function f(){
+//await db.removeUser('5ddd0f393995776be0000ef9');
+let users = await db.getUsers();
+console.log('Les utilisateurs :'+users);
+};
+f();
+
 router.get('/connectUser',async function (req, res, next){
     passport.authenticate('local', function(err, user, info) {
       console.log('user :',user);
@@ -22,9 +30,14 @@ router.get('/connectUser',async function (req, res, next){
           console.log(err);
           res.sendStatus(400)
         }else{
-          
-          res.redirect('/profil');//{user:req.user}
+
+          res.redirect('/index');
         }
       });
     })(req, res, next);
-    });
+  });
+
+      router.get('/logout', function(req, res){
+          req.logout();
+          res.sendStatus(200);
+      });

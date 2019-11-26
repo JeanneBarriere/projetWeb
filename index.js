@@ -13,12 +13,14 @@ app.use(passport.session());
 app.use('/', require('./server/users'));
 app.use('/', require('./server/passport'));
 
+
 app.engine('hbs', hbs({
   extname: 'hbs',
   defaultLayout: 'default',
   layoutsDir: __dirname + '/views/',
 }));
 app.set('view engine', 'hbs');
+
 
 app.get('/profil', function (req, res) {
   let data = {
@@ -128,6 +130,8 @@ app.get('/recipe/:page', function (req, res) {
   }
   res.render('recipe.hbs', data);
 });
+
+
 
 app.get('/*', function (req, res) {
   res.sendStatus(404);
