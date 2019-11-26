@@ -49,10 +49,18 @@
  			<label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
  	</div>
 
- 		<ul id="connexion">
- 			<li><a href="/logIn">Se connecter</a></li>
- 			<li><a href="/signIn">S'inscrire</a></li>
- 		</ul>
+  {{# if (user)}}
+    <ul id="connexion">
+      <li><a href="/logIn">{{user.pseudo}}r</a></li>
+      <li><a href="/signIn">{{LogOut}}</a></li>
+    </ul>
+  {{ else }}
+    <ul id="connexion">
+      <li><a href="/logIn">Se connecter</a></li>
+      <li><a href="/signIn">S'inscrire</a></li>
+    </ul>
+  {{/if}}
+
 
    </header>
    {{{ body }}}

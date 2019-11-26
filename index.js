@@ -7,21 +7,11 @@ const connection = require('./server/db.js');
 const passport = require('passport');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
-app.use('/', require('./server/passport'));
-app.use('/', require('./server/users'));
 app.use(session({ secret: 'keyboard cat',resave:true,saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
-
-
-app.get('/profil', function (req, res) {
-  let data = {
-    title: 'Connexion confirmée',
-  }
-  let user = req.user;
-  console.log('user dans profil:', user);
-  res.render('profil.hbs', {user:user});
-});
+app.use('/', require('./server/users'));
+app.use('/', require('./server/passport'));
 
 app.engine('hbs', hbs({
   extname: 'hbs',
@@ -30,10 +20,18 @@ app.engine('hbs', hbs({
 }));
 app.set('view engine', 'hbs');
 
+app.get('/profil', function (req, res) {
+  let data = {
+    title: 'Connexion confirmée',
+    user:req.user,
+  }
+  res.render('profil.hbs',data);
+});
 
 app.get('', function (req, res) {
   let data = {
     title: 'Index',
+    user:req.user,
   }
   res.render('index.hbs', data);
 });
@@ -42,6 +40,7 @@ app.get('', function (req, res) {
 app.get('/confirmedRegistration', function (req, res) {
   let data = {
     title: 'Nouvelle inscription',
+    user:req.user,
   }
   res.render('confirmedRegistration.hbs', data);
 });
@@ -49,6 +48,7 @@ app.get('/confirmedRegistration', function (req, res) {
 app.get('/index', function (req, res) {
   let data = {
     title: 'Index',
+    user:req.user,
   }
   res.render('index.hbs', data);
 });
@@ -56,6 +56,7 @@ app.get('/index', function (req, res) {
 app.get('/signIn', function (req, res) {
   let data = {
     title: 'Inscription',
+    user:req.user,
   }
   res.render('signIn.hbs', data);
 });
@@ -63,6 +64,7 @@ app.get('/signIn', function (req, res) {
 app.get('/LogIn', function (req, res) {
   let data = {
     title: 'connexion',
+    user:req.user,
   }
   res.render('logIn.hbs', data);
 });
@@ -70,6 +72,7 @@ app.get('/LogIn', function (req, res) {
 app.get('/newRecipe', function (req, res) {
   let data = {
     title: 'Nouvelle recette',
+    user:req.user,
   }
   res.render('newRecipe.hbs', data);
 });
@@ -77,6 +80,7 @@ app.get('/newRecipe', function (req, res) {
 app.get('/listing', function (req, res) {
     let data = {
       title: 'Cakes',
+      user:req.user,
     }
     res.render('listing.hbs', data);
 });
@@ -89,6 +93,7 @@ app.get('/listing/:type', function (req, res) {
 
     let data = {
       title: 'Index',
+      user:req.user,
     }
 
     res.render('index.hbs', data);
@@ -97,17 +102,16 @@ app.get('/listing/:type', function (req, res) {
 
     let data = {
       title: 'Cakes',
+      user:req.user,
     }
-
     res.render('listing.hbs', data);
-
   }
-
 });
 
 app.get('/recipe', function (req, res) {
   let data = {
     title: 'Recettes',
+    user:req.user,
   }
   res.render('recipe.hbs', data);
 });
@@ -116,13 +120,10 @@ app.get('/recipe/:page', function (req, res) {
   console.log(req.params.page);
   let data = {
     title: 'Recettes',
+    user:req.user,
   }
   res.render('recipe.hbs', data);
 });
-
-app.get('/recipe.html', function (req, res) {
-  res.sendFile(__dirname+"/public/recipe.html");
-  });
 
 app.get('/*', function (req, res) {
   res.sendStatus(404);

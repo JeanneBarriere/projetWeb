@@ -22,7 +22,8 @@ router.get('/connectUser',async function (req, res, next){
           console.log(err);
           res.sendStatus(400)
         }else{
-          res.send({user:req.user});
+          
+          res.redirect('/profil');//{user:req.user}
         }
       });
     })(req, res, next);
