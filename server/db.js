@@ -79,6 +79,15 @@ async function createRecipe(recipeData) {
 	console.log(result);
 };
 
+async function getRecipes(pageNumber, pageSize, type){
+
+	const Recipes = await Recipe
+	.find({category : type})
+	.skip((pageNumber - 1) * pageSize)
+	.limit(pageSize)
+
+}
+
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 	.then(function() {
 		console.log('now connected to mongodb!');
