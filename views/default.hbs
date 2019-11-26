@@ -20,15 +20,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
 
  </head>
+
  <body>
-   <header>
-     <img src="/images/logoCupcake.png" alt="logoCupcake" title="logoCupcake" class="logo">
-     <h1>
+
+  <header>
+    <img src="/images/logoCupcake.png" alt="logoCupcake" title="logoCupcake" class="logo">
+    
+    <h1>
        CooKieJar
-     </h1>
- 		<ul id="menu-deroulant">
+    </h1>
+ 		
+    <ul id="menu-deroulant">
  			<li><a href="/index">Accueil</a></li>
- 			<li><a href="/recipe">Recettes  <i class="fas fa-sort-down"></i></a>
+ 			<li><a href="/recipe">Recettes <i class="fas fa-sort-down"></i></a>
  					<ul>
  						<li><a href="/listing/tartes">Tartes</a></li>
  						<li><a href="/listing/cookies">Cookies</a></li>
@@ -45,29 +49,28 @@
  			<li><a href="#">Forum</a></li>
  		</ul>
 
- 	<div class="search">
- 			<label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
- 	</div>
+   	<div class="search">
+   			<label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
+   	</div>
 
-  {{# if (user)}}
-    <ul id="connexion">
-      <li><a href="/logIn">{{user.pseudo}}r</a></li>
-      <li><a href="/signIn">{{LogOut}}</a></li>
-    </ul>
-  {{ else }}
-    <ul id="connexion">
-      <li><a href="/logIn">Se connecter</a></li>
-      <li><a href="/signIn">S'inscrire</a></li>
-    </ul>
-  {{/if}}
-
+    {{# if (user)}}
+      <ul id="connexion">
+        <li><a href="/logIn">{{user.pseudo}}r</a></li>
+        <li><a href="/signIn">{{LogOut}}</a></li>
+      </ul>
+    {{ else }}
+      <ul id="connexion">
+        <li><a href="/logIn">Se connecter</a></li>
+        <li><a href="/signIn">S'inscrire</a></li>
+      </ul>
+    {{/if}}
 
    </header>
+
    {{{ body }}}
+
    <footer>
-
    </footer>
-
 
 
  </body>

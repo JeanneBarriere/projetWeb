@@ -88,12 +88,12 @@ async function getRecipes(pageNumber, pageSize, type){
 
 }
 
-// mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-// 	.then(function() {
-// 		console.log('now connected to mongodb!');
-// 	})
-// 	.catch(function (err) {
-// 		console.log ("Erreur lors de la connection à mongodb : ", err);
-// 	})
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+	.then(function() {
+		console.log('now connected to mongodb!');
+	})
+	.catch(function (err) {
+		console.log ("Erreur lors de la connection à mongodb : ", err);
+	})
 
 	module.exports = {createUser,getUsers,removeUser,User};
