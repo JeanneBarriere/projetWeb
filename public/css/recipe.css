@@ -17,7 +17,6 @@ hr {
 
 article{
 	background: white;
-
 }
 
 
@@ -26,7 +25,7 @@ article{
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
-	align-items: center;
+	align-items: flex-start;
 	align-content: center;
 
 }
@@ -40,10 +39,13 @@ article{
 	align-content: center;
 
 	height: 350px;
+	width: 100%;
 
 }
 
 #photo {
+
+	flex-grow: 0;
 
 	box-sizing: border-box;
 	margin: 10px 10px 10px 10px;
@@ -57,6 +59,8 @@ article{
 
 #general {
 
+	flex-grow: 1;
+
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
@@ -68,12 +72,6 @@ article{
 
 	margin: 10px 10px 10px 10px;
 	border: solid 3px #F63471;
-
-
-
-	/*background: #99093b; */
-
-
 
 	height: 300px;
 
@@ -96,8 +94,6 @@ article{
 	box-sizing: border-box;
 
 }
-
-
 
 .empty {
 
@@ -130,10 +126,13 @@ article{
 	align-content: center;
 
 	height: 400px;
+	width: 100%;
 
 }
 
 #ingredient {
+
+	flex-grow: 1;
 
 	display: flex;
 	flex-flow: column nowrap;
@@ -162,6 +161,8 @@ article{
 
 .etape {
 
+	flex-grow: 3;
+
  	display: flex;
 	flex-flow: column nowrap;
 	justify-content: flex-start;
@@ -173,6 +174,8 @@ article{
 	margin: 10px 10px 10px 10px;
 
 	background: pink;
+
+	height: 300px;
 
 
 }

@@ -12,22 +12,30 @@ a {
 }
 
 body {
+
+  display: flex;
+  flex-flow: column nowrap;
+
   background-color: #FFF1FF;
   font-family: Arial Narrow, sans-serif;
 }
 
 header {
+
   display: flex;
-  min-width: 100%;
-  min-height: 10%;
-  max-width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  min-height: 80px;
   max-height: 10%;
+
   background-color: white;
   border-top: solid 2px #F63471;
-  align-items: center;
   box-shadow: 0px 1px 3px #EFE9EE;
   z-index: 10;
-  position: relative;
+
   font-size: 15px;
 }
 
@@ -38,13 +46,13 @@ header h1 {
 }
 
 header img {
-  width:2.5%;
-  height:2.5%;
+
+  height: 50%;
   margin-left: 2%;
   margin-right: 2%;
   padding: 2px;
-  border : solid 2px #F63471;
-  border-radius : 50%;
+  border: solid 2px #F63471;
+  border-radius: 50%;
 }
 
 header ul {
@@ -54,38 +62,59 @@ header ul {
   font-size: 1.2em;
 }
 
+#menu-deroulant{
+
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
 .search{
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
   color: white;
-  align-self: center;
-  margin-left: 30px;
   background-color: #F63471;
-  padding: 2px 2px 2px 2px;
-  padding-left: 3px;
+  
+  margin-left: 30px;
+  padding: 2px 2px 2px 3px;
   border-radius: 0.3em;
 }
 
 #connexion{
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-end;
+
   margin-left: auto;
   margin-right: 10px;
-  min-width: 20%;
-  justify-content : space-around;
+/*  min-width: 20%;*/
+
+}
+
+#connexion li {
+
+  margin-right: 10px;
+  margin-left: 10px;
+
 }
 
 #connexion a {
-  color : #F63471;
+  color: #F63471;
   text-decoration: none;
-  border : solid 2px #F63471;
-  border-radius : 3em;
+  border: solid 2px #F63471;
+  border-radius: 3em;
   padding: 3px 10px 3px 10px;
 }
 
 #connexion a:hover {
-  color : white;
+  color: white;
   background-color:#F63471 ;
-  text-decoration: none;
-  border : solid 2px #F63471;
-  border-radius : 3em;
-  padding: 3px 10px 3px 10px;
 }
 
 
@@ -98,13 +127,16 @@ article {
   box-shadow: 1px 0px 3px #EFE9EE, -1px 0px 3px #EFE9EE;
   padding: 20px;
   color : #474747;
+
+  width: 800px; 
+
 }
 
 .text{
   font-size: 1.5em;
 }
 
-nav {
+/*nav {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -135,7 +167,8 @@ nav li {
 nav a {
   color : gray;
   text-decoration: none;
-}
+}*/
+
 footer {
   background-color: white;
   height: 20%;
@@ -152,7 +185,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 860px) {
   #connexion {
     display: none;
   }
