@@ -22,12 +22,12 @@ router.get('/connectUser',async function (req, res, next){
     passport.authenticate('local', function(err, user, info) {
       console.log('user :',user);
       if(err || !user){
-        console.log('erreur 1',err);
+        console.log(err);
         res.sendStatus(400);
       }
       req.logIn(user, function(err){
         if(err){
-          console.log('erreur 2',err);
+          console.log(err);
           res.sendStatus(400)
         }else{
 
