@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "\"# projetWeb\" \r # projetWeb",
   "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": { "start": " node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +24,7 @@
     "mongoose": "^5.7.7",
     "nodemon": "^1.19.3",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "start": "^5.1.0"
   }
 }
