@@ -147,5 +147,10 @@ pages.renderFiles([{
   "view": "index",
   "url": "",
   "options": { title: "Express" }
+},
+{
+  "view": "logIn",
+  "url": "logIn",
+  "options": { title: "Connection" }
 }
 ]);
