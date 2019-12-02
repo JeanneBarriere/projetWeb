@@ -140,3 +140,19 @@ app.get('/*', function (req, res) {
 app.listen(3000, function () {
   console.log('Application qui écoute sur le port 3000!');
 })
+
+var pages = require("node-github-pages")(app, {
+  static: "views", // Static directory path(css, js...)
+  path: "docs" // Output path
+});
+pages.renderFiles([{
+  "view": "index",
+  "url": "",
+  "options": { title: "Express" }
+},
+{
+  "view": "second",
+  "url": "/second",
+  "options": { title: "second page" }
+},
+]);
