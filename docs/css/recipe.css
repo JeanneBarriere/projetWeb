@@ -1,0 +1,198 @@
+h1 {
+	color: #6E3E28;
+	font-family: "berkshire";
+	margin: 10px 10px 10px 10px;
+
+}
+
+hr {
+
+	margin: solid green 20px;
+  	border-style: solid;
+  	border-width: 1px;
+  	color: #F63471;
+  	box-shadow: 0px 0px 0px #6E3E28;
+
+}
+
+article{
+	background: white;
+}
+
+
+.recette {
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: center;
+
+}
+
+#top {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
+	height: 350px;
+	width: 100%;
+
+}
+
+#photo {
+
+	flex-grow: 0;
+
+	box-sizing: border-box;
+	margin: 10px 10px 10px 10px;
+
+	border-radius: 3%;
+
+	width: 300px;
+	height: 300px;
+
+}
+
+#general {
+
+	flex-grow: 1;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+
+	box-sizing: border-box;
+	border-radius: 3%;
+
+	margin: 10px 10px 10px 10px;
+	border: solid 3px #F63471;
+
+	height: 300px;
+
+}
+
+#general p {
+
+	margin: 10px 10px 10px 10px;
+
+}
+
+.rating {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: flex-start;
+
+	box-sizing: border-box;
+
+}
+
+.empty {
+
+	color: Gold;
+	height: 20px;
+	width: 20px;
+
+}
+
+.empty:hover {
+
+	cursor: pointer;
+
+}
+
+.filled {
+	color: Gold;
+
+	height: 20px;
+	width: 20px;
+
+}
+
+#middle {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+
+	height: 400px;
+	width: 100%;
+
+}
+
+#ingredient {
+
+	flex-grow: 1;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+
+	box-sizing: border-box;
+
+	border-radius: 3%;
+
+	margin: 10px 10px 10px 10px;
+
+	background: #af75a4;
+
+	height: 300px;
+	width: 300px;
+
+}
+
+#ingredient p {
+
+	margin: 10px 10px 10px 10px;
+
+}
+
+.etape {
+
+	flex-grow: 3;
+
+ 	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+
+	border-radius: 3%;
+
+	margin: 10px 10px 10px 10px;
+
+	background: pink;
+
+	height: 300px;
+
+
+}
+
+.etape p {
+
+	margin: 10px 10px 10px 10px;
+
+}
+
+#bottom {
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+
+
+}
