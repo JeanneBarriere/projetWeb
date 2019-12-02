@@ -1,0 +1,38 @@
+<article class="newRecipe">
+  <div class="formbackground">
+
+    <h1>Nouvelle recette</h1>
+
+    <p>Remplissez les informations ci-dessous pour enregistrer votre recette:</p>
+
+    <form class="recipeForm" >
+      <label for="title">Titre : </label><input type="text" name="title" id="title">
+
+      <p>La catégorie :</p>
+      <div id="category">
+        <select class="category" name="category" id="category">
+          <option value="tartes">tartes</option>
+          <option value="cookies">cookies</option>
+          <option value="macarons">macarons</option>
+          <option value="smoothies">smoothies</option>
+          <option value="biscuits">biscuits</option>
+          <option value="entremets">entremets</option>
+          <option value="glaces">glaces</option>
+          <option value="chocolat">chocolat</option>
+        </select>
+      </div>
+
+      <label for="ingredients">Ingredients </label><input type="text[]" name="ingredients" id="ingredients">
+      <label for="tools">Ustenciles </label><input type="text[]" name="tools" id="tools">
+      <label for="time">Temps de préparation (en min)</label><input type="number" name="time" id="time">
+      <label for="backingTime">Temps de cuisson (en min)</label><input type="number" name="backingTime" id="backingTime">
+      <br>
+      <label for="steps">Les étapes</label>
+      <textarea name="steps" rows="8" cols="80"></textarea>
+      <br>
+      <input type="submit" value="Envoyer" >
+    </div>
+  </form>
+  </div>
+
+</article>
