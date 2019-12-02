@@ -13,17 +13,6 @@ app.use(passport.session());
 app.use('/', require('./server/users'));
 app.use('/', require('./server/passport'));
 
-var pages = require("node-github-pages")(app, {
-  static: "public", // Static directory path(css, js...)
-  path: "docs" // Output path
-});
-pages.renderFiles([{
-  "view": "index",
-  "url": "",
-  "options": { title: "Express" }
-}
-]);
-
 app.engine('hbs', hbs({
   extname: 'hbs',
   defaultLayout: 'default',
@@ -142,7 +131,6 @@ app.get('/recipe/:page', function (req, res) {
 });
 
 
-
 app.get('/*', function (req, res) {
   res.sendStatus(404);
 })
@@ -150,3 +138,14 @@ app.get('/*', function (req, res) {
 app.listen(3000, function () {
   console.log('Application qui écoute sur le port 3000!');
 })
+
+var pages = require("node-github-pages")(app, {
+  static: "public", // Static directory path(css, js...)
+  path: "docs" // Output path
+});
+pages.renderFiles([{
+  "view": "index",
+  "url": "",
+  "options": { title: "Express" }
+}
+]);
