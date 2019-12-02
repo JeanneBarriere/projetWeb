@@ -141,7 +141,7 @@ app.listen(3000, function () {
 
 var pages = require("node-github-pages")(app, {
   static: "public", // Static directory path(css, js...)
-  path: "docs" // Output path
+  path: "docs/public" // Output path
 });
 pages.renderFiles([{
   "view": "index",
