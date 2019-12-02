@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "\"# projetWeb\" \r # projetWeb",
   "main": "script.js",
-  "scripts": { "start": " node index.js"
+  "scripts": {
+    "start": " node index.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.17.0",
+    "handlebars": "^4.5.3",
     "mongoose": "^5.7.7",
     "nodemon": "^1.19.3",
     "passport": "^0.4.0",
