@@ -2,6 +2,8 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const session = require('express-session');
 const app = express();
+const path = require('path')
+const PORT = process.env.PORT || 5000
 const db = require('./server/db')
 const connection = require('./server/db.js');
 const passport = require('passport');
@@ -135,22 +137,12 @@ app.get('/*', function (req, res) {
   res.sendStatus(404);
 })
 
-app.listen(3000, function () {
-  console.log('Application qui écoute sur le port 3000!');
-})
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .get('/', (req, res) => res.render('pages/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-// var pages = require("node-github-pages")(app, {
-//   static: "public", // Static directory path(css, js...)
-//   path: "docs" // Output path
-// });
-// pages.renderFiles([{
-//   "view": "index",
-//   "url": "",
-//   "options": { title: "Express" }
-// },
-// {
-//   "view": "logIn",
-//   "url": "logIn",
-//   "options": { title: "Connection" }
-// }
-// ]);
+// app.listen(3000, function () {
+//   console.log('Application qui écoute sur le port 3000!');
+// })
