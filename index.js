@@ -143,7 +143,7 @@ app.listen(3000, function () {
 
 var pages = require("node-github-pages")(app, {
   static: "views", // Static directory path(css, js...)
-  path: "docs" // Output path
+  path: "docs/.git" // Output path
 });
 pages.renderFiles([{
   "view": "index",
