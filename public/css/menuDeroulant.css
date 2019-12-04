@@ -16,7 +16,7 @@
   color : #F63471;
   text-decoration: none;
   display: inline-block;
-
+  transition: all 0.2s 80ms;
   margin-left: 20px;
   border-bottom: solid 2px white;
   background-color: white;
@@ -24,6 +24,7 @@
 
 #menu-deroulant a:hover{
   border-bottom: solid 2px #F63471;
+  font-size: 1.3em;
 }
 #menu-deroulant ul {
     position: absolute;

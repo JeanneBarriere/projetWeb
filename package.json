@@ -1,21 +1,21 @@
 {
-  "name": "git_projetWeb",
+  "name": "cookiejar33",
   "version": "1.0.0",
   "description": "\"# projetWeb\" \r # projetWeb",
   "main": "index.js",
-  "scripts": {"start": "node index.js" 
+  "scripts": {"start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JeanneBarriere/projetWeb.git"
+    "url": "https://git.heroku.com/cookiejar33.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JeanneBarriere/projetWeb/issues"
+    "url": "https://git.heroku.com/cookiejar33.git/issues"
   },
-  "homepage": "https://github.com/JeanneBarriere/projetWeb#readme",
+  "homepage": "https://git.heroku.com/cookiejar33.git#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",

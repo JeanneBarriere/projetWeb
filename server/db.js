@@ -1,6 +1,5 @@
 const __PASSWORD__ = require('../config/pwd.js');
 const project_number = 0; //Changer ici par votre numéro de projet
-
 const pwd = encodeURIComponent(__PASSWORD__);
 const project_name = 'project' + project_number;
 const user_name = 'user_project_' + project_number;
@@ -48,7 +47,7 @@ async function removeUser(id) {
 const recipeSchema = new mongoose.Schema({
 	title: String,
 	category: String,
-	author: String,
+//	author: String,
 	rating: Number, //tab
 	time: Number,
 	bakingTime: Number,
@@ -65,7 +64,7 @@ async function createRecipe(recipeData) {
 	const recipe = new Recipe({
 	title: recipeData.title,
 	category: recipeData.category,
-	author: recipeData.author,
+	//author: recipeData.author,
 	rating: recipeData.rating,
 	time: recipeData.time,
 	bakingTime: recipeData.bakingTime,
@@ -96,4 +95,4 @@ async function getRecipes(pageNumber, pageSize, type){
 		console.log ("Erreur lors de la connection à mongodb : ", err);
  	})
 
-	module.exports = {createUser,getUsers,removeUser,User};
+	module.exports = {createUser,getUsers,removeUser,User,createRecipe};

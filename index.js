@@ -11,7 +11,15 @@ app.use(session({ secret: 'keyboard cat',resave:true,saveUninitialized: true }))
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/', require('./server/users'));
+app.use('/', require('./server/recipes'));
 app.use('/', require('./server/passport'));
+
+const path = require('path')
+const PORT = process.env.PORT || 5000
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+
 
 
 app.engine('hbs', hbs({
@@ -24,7 +32,7 @@ app.set('view engine', 'hbs');
 
 app.get('/profil', function (req, res) {
   let data = {
-    title: 'Connexion confirmée',
+    title: 'Profil',
     user:req.user,
   }
   res.render('profil.hbs',data);
@@ -32,7 +40,7 @@ app.get('/profil', function (req, res) {
 
 app.get('', function (req, res) {
   let data = {
-    title: 'Index',
+    title: 'Cookiejar - Accueil',
     user:req.user,
   }
   res.render('index.hbs', data);
@@ -49,7 +57,7 @@ app.get('/confirmedRegistration', function (req, res) {
 
 app.get('/index', function (req, res) {
   let data = {
-    title: 'Index',
+    title: 'Cookiejar - Accueil',
     user:req.user,
   }
   res.render('index.hbs', data);
@@ -137,6 +145,4 @@ app.get('/*', function (req, res) {
   res.sendStatus(404);
 })
 
-app.listen(3000, function () {
-  console.log('Application qui écoute sur le port 3000!');
-})
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))

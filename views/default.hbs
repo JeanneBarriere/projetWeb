@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/css/listing.css" />
     <link rel="stylesheet" href="/css/signIn.css" />
     <link rel="stylesheet" href="/css/logIn.css" />
+    <link rel="stylesheet" href="/css/newRecipe.css" />
     <script src="/js/ajax.js"></script>
     <script src="/js/recipe.js"></script>
     <script src="/js/divers.js"></script>
@@ -37,7 +38,7 @@
  						<li><a href="/listing/glaces">Glaces</a></li>
  						<li><a href="/listing/macarons">Macarons</a></li>
  						<li><a href="/listing/entremets">Entremets</a></li>
- 						<li><a href="/listing/cakes">Cakes</a></li>
+ 						<li><a href="/listing/cakes">Cupcakes</a></li>
  						<li><a href="/listing/biscuits">Biscuits</a></li>
  						<li><a href="/listing/smoothies">Smoothies</a></li>
  					</ul>
@@ -48,7 +49,7 @@
       {{ else }}
       <li onclick="connectforrecipe()"><a href=#>Nouvelle recette</a></li>
       {{/if}}
- 			<li><a href="#">Forum</a></li>
+ 			<!-- <li><a href="#">Forum</a></li> -->
  		</ul>
 
  	<div class="search">
@@ -58,7 +59,7 @@
   {{# if user}}
     <ul id="connexion">
       <li><a href="/profil">{{user.pseudo}}</a></li>
-      <li id="logout"><a href=#>LogOut</a></li>
+      <li id="logout"><a href=#>Déconnexion</a></li>
       <script src="/js/logOut.js"></script>
     </ul>
   {{ else }}
