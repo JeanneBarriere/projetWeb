@@ -87,6 +87,11 @@ async function getRecipes(pageNumber, pageSize, type){
 
 }
 
+async function getRecipes(){
+	const allRecipe = await Recipe.find();
+  return allRecipe;
+}
+
  mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
  	.then(function() {
 		console.log('now connected to mongodb!');
