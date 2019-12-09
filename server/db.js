@@ -87,10 +87,10 @@ async function getRecipes(pageNumber, pageSize, type){
 
 }
 
-async function getRecipes(){
+/*async function getRecipes(){
 	const allRecipe = await Recipe.find();
   return allRecipe;
-}
+}*/
 
  mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
  	.then(function() {

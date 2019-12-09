@@ -102,6 +102,10 @@ article {
   color : #474747;
 }
 
+article h1 {
+  text-transform: capitalize;
+}
+
 .text{
   font-size: 1.5em;
 }

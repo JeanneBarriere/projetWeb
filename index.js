@@ -95,28 +95,40 @@ app.get('/listing', function (req, res) {
     res.render('listing.hbs', data);
 });
 
-app.get('/listing/:type', function (req, res) {
+const recipes = [];
 
-  let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cakes', 'biscuits', 'smoothies'];
+async function f(){
+  recipes = await getRecipes(page, 2, type);
+}
 
-  let page = req.query.page;
+app.get('/listing/:type/:page', function (req, res) {
+
+  let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cupcakes', 'biscuits', 'smoothies'];
+
+  let page = req.params.page;
+  /*let recipes = await getRecipes(page, 2, type);*/
 
   console.log("listing "+page);
+  console.log(recipes);
 
   if (listingArray.indexOf(req.params.type) == -1) {
 
     let data = {
       title: 'Index',
-      user:req.user,
+      user: req.user,
+      recipes,
     }
 
     res.render('index.hbs', data);
 
   } else {
 
+    //Solution pas très élégante, autre manière de faire ?
+    const upper = req.params.type.charAt(0).toUpperCase() + req.params.type.substring(1);
+
     let data = {
-      title: req.params.type,
-      user:req.user,
+      title: upper,
+      user: req.user,
     }
     res.render('listing.hbs', data);
   }
@@ -129,17 +141,6 @@ app.get('/recipe', function (req, res) {
   }
   res.render('recipe.hbs', data);
 });
-
-app.get('/recipe/:page', function (req, res) {
-  console.log(req.params.page);
-  let data = {
-    title: 'Recettes',
-    user:req.user,
-  }
-  res.render('recipe.hbs', data);
-});
-
-
 
 app.get('/*', function (req, res) {
   res.sendStatus(404);
