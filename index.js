@@ -101,6 +101,34 @@ async function f(){
   recipes = await getRecipes(page, 2, type);
 }
 
+app.get('/listing/:type/', function (req, res) {
+
+  let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cupcakes', 'biscuits', 'smoothies'];
+ 
+  if (listingArray.indexOf(req.params.type) == -1) {
+
+    let data = {
+      title: 'Index',
+      user: req.user,
+      recipes,
+    }
+
+    res.render('index.hbs', data);
+
+  } else {
+
+    //Solution pas très élégante, autre manière de faire ?
+    const upperCase = req.params.type.charAt(0).toUpperCase() + req.params.type.substring(1);
+
+    let data = {
+      title: upperCase,
+      user: req.user,
+    }
+    res.render('listing.hbs', data);
+  }
+}); 
+
+
 app.get('/listing/:type/:page', function (req, res) {
 
   let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cupcakes', 'biscuits', 'smoothies'];
@@ -124,10 +152,10 @@ app.get('/listing/:type/:page', function (req, res) {
   } else {
 
     //Solution pas très élégante, autre manière de faire ?
-    const upper = req.params.type.charAt(0).toUpperCase() + req.params.type.substring(1);
+    const upperCase = req.params.type.charAt(0).toUpperCase() + req.params.type.substring(1);
 
     let data = {
-      title: upper,
+      title: upperCase,
       user: req.user,
     }
     res.render('listing.hbs', data);
