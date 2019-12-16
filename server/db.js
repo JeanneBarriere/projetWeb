@@ -100,4 +100,4 @@ async function getRecipes(pageNumber, pageSize, type){
 		console.log ("Erreur lors de la connection à mongodb : ", err);
  	})
 
-	module.exports = {createUser,getUsers,removeUser,User,createRecipe};
+	module.exports = {createUser,getUsers,removeUser,User,createRecipe, getRecipes};
