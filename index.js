@@ -62,12 +62,12 @@ app.get('/index', function (req, res) {
   res.render('index.hbs', data);
 });
 
-app.get('/signIn', function (req, res) {
+app.get('/signUp', function (req, res) {
   let data = {
     title: 'Inscription',
     user:req.user,
   }
-  res.render('signIn.hbs', data);
+  res.render('signUp.hbs', data);
 });
 
 app.get('/LogIn', function (req, res) {
