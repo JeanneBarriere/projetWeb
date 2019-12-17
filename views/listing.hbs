@@ -9,6 +9,7 @@
 
      	<div class="list">
 
+     		{{#if recipes}}
      		{{#each recipes}}
 	     	
 	     	<div class="listItem"> 
@@ -42,6 +43,15 @@
 
 	     	</div>
 	     	{{/each}}
+
+	     	{{else}}
+	     		<p> 
+	     			Il n'y a rien ici pour l'instant. Voulez-vous ajouter une nouvelle recette ? 
+	     			{{#if user}} Cliquez <a href="/newRecipe">ici</a>.
+      				{{else}} Connectez-vous et cliquez <a href=# onclick="connectforrecipe()">ici</a>.
+      				{{/if}}
+      			</p>
+	     	{{/if}}
 	    </div>
 
     </article>
