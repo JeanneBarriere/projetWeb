@@ -78,6 +78,11 @@ async function createRecipe(recipeData) {
 	console.log(result);
 };
 
+async function getAllRecipes(){
+	const allRecipes = await Recipe.find();
+  return allRecipes;
+}
+
 async function getRecipes(pageNumber, pageSize, type){
 
 	const Recipes = await Recipe
@@ -100,4 +105,4 @@ async function getRecipes(pageNumber, pageSize, type){
 		console.log ("Erreur lors de la connection à mongodb : ", err);
  	})
 
-	module.exports = {createUser,getUsers,removeUser,User,createRecipe, getRecipes};
+	module.exports = {createUser,getUsers,removeUser,User,createRecipe, getRecipes, getAllRecipes};
