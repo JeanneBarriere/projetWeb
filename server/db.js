@@ -78,6 +78,11 @@ async function createRecipe(recipeData) {
 	console.log(result);
 };
 
+async function getAllRecipes(){
+	const allRecipes = await Recipe.find();
+  return allRecipes;
+}
+
 async function getRecipes(pageNumber, pageSize, type){
 
 	const recipes = await Recipe
@@ -97,3 +102,4 @@ async function getRecipes(pageNumber, pageSize, type){
  	})
 
 	module.exports = {createUser, getUsers, removeUser, User, createRecipe, getRecipes};
+
