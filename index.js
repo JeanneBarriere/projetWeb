@@ -99,7 +99,7 @@ app.get('/listing/:type/', async function (req, res) {
   let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cupcakes', 'biscuits', 'smoothies'];
  
   let type = req.params.type;
-  let recipes = await db.getRecipes(1, 1, type);
+  let recipes = await db.getRecipes(1, 3, type);
 
   console.log("Recipes: "+recipes);
 
@@ -132,7 +132,7 @@ app.get('/listing/:type/:page', async function (req, res) {
 
   let page = req.params.page;
   let type = req.params.type;
-  let recipes = await db.getRecipes(page, 1, type);
+  let recipes = await db.getRecipes(page, 3, type);
 
   console.log("Page: "+page);
   console.log("Recipes: "+recipes);
