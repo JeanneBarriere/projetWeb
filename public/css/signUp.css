@@ -1,4 +1,4 @@
-.signIn {
+.signUp {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,7 @@
   color: #6E3E28;
 }
 
-.signIn h1{
+.signUp h1{
   align-self: center;
 }
 
@@ -16,7 +16,7 @@
   display: flex;
 }
 
-.signIn form{
+.signUp form{
   display: flex;
   flex-direction: column;
   width: 300px;
