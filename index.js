@@ -97,7 +97,7 @@ app.get('/listing', function (req, res) {
 app.get('/listing/:type/', async function (req, res) {
 
   let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cupcakes', 'biscuits', 'smoothies'];
- 
+
   let type = req.params.type;
   let recipes = await db.getRecipes(1, 3, type);
 
@@ -124,7 +124,7 @@ app.get('/listing/:type/', async function (req, res) {
     }
     res.render('listing.hbs', data);
   }
-}); 
+});
 
 app.get('/listing/:type/:page', async function (req, res) {
 
