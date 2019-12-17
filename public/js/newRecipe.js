@@ -16,7 +16,7 @@ form.addEventListener("submit", function (e) {
     //var author = user.pseudo;
     var rating = 0;
     var time = form.elements.time.value;
-    var backingTime = form.elements.backingTime.value;
+    var bakingTime = form.elements.bakingTime.value;
     var tools = form.elements.tools.value;
     var ingredients = form.elements.ingredients.value;
     var steps = form.elements.steps.value;

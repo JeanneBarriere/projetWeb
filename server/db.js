@@ -85,17 +85,13 @@ async function getAllRecipes(){
 
 async function getRecipes(pageNumber, pageSize, type){
 
-	const Recipes = await Recipe
+	const recipes = await Recipe
 	.find({category : type})
 	.skip((pageNumber - 1) * pageSize)
 	.limit(pageSize)
 
+	return recipes;
 }
-
-/*async function getRecipes(){
-	const allRecipe = await Recipe.find();
-  return allRecipe;
-}*/
 
  mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
  	.then(function() {
@@ -105,4 +101,5 @@ async function getRecipes(pageNumber, pageSize, type){
 		console.log ("Erreur lors de la connection à mongodb : ", err);
  	})
 
-	module.exports = {createUser,getUsers,removeUser,User,createRecipe, getRecipes, getAllRecipes};
+	module.exports = {createUser, getUsers, removeUser, User, createRecipe, getRecipes};
+
