@@ -4,10 +4,10 @@
   		<article>
 			
 			{{# if user}}
-				<h1>Vous êtes connecté,{{user.firstName}} !!</h1>
+				<p class="text"> Bonjour {{user.firstName}} ! Que cherchez-vous aujourd'hui ? </p>
+			{{else}}
+				<p class="text">Bienvenue sur notre site de <strong>recettes de patisserie</strong> ! N'hésitez pas à choisir une <strong>catégorie</strong> de recettes ci-dessous :</p>
 			{{/if}}
-
-			<p class="text">Bienvenue sur notre site de <strong>recettes de patisserie</strong> ! N'hésitez pas à choisir une <strong>catégorie</strong> de recettes ci-dessous :</p>
 			
 			<div class="Andy">
 

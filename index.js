@@ -106,11 +106,12 @@ app.get('/listing/:type/', async function (req, res) {
   } else {
 
     //Solution pas très élégante, autre manière de faire ?
-    const upperCase = "CooKieJar - "+req.params.type.charAt(0).toUpperCase() + req.params.type.substring(1);
+    type = req.params.type.charAt(0).toUpperCase() + req.params.type.substring(1);
 
     let data = {
-      title: upperCase,
+      title: "CooKieJar - "+type,
       user: req.user,
+      type,      
       page,
       recipes
     }
@@ -143,6 +144,7 @@ app.get('/listing/:type/:page', async function (req, res) {
     let data = {
       title: "CooKieJar - "+type,
       user: req.user,
+      type,
       page,
       recipes
     }
