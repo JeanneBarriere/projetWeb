@@ -98,8 +98,9 @@ app.get('/listing/:type/', async function (req, res) {
 
   let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cupcakes', 'biscuits', 'smoothies'];
 
+  let page = 1;
   let type = req.params.type;
-  let recipes = await db.getRecipes(1, 3, type);
+  let recipes = await db.getRecipes(page, 3, type);
 
   console.log("Recipes: "+recipes);
 
@@ -120,7 +121,8 @@ app.get('/listing/:type/', async function (req, res) {
     let data = {
       title: upperCase,
       user: req.user,
-      recipes,
+      page,
+      recipes
     }
     res.render('listing.hbs', data);
   }
@@ -151,7 +153,8 @@ app.get('/listing/:type/:page', async function (req, res) {
     let data = {
       title: type,
       user: req.user,
-      recipes,
+      page,
+      recipes
     }
     res.render('listing.hbs', data);
   }

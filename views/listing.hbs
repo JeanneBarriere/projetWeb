@@ -4,7 +4,6 @@
 		<h1>{{ title }}</h1>
 
       	<hr>
-      	<br>
      	<br>
 
      	<div class="list">
@@ -16,7 +15,7 @@
 
 	     		<img src="/images/parDefault.png" alt="imagerecette" id="photo"> </img>
 	     		<div>
-	     			<p> {{this.title}} </p>
+	     			<h2> {{this.title}} </h2>
 
 	     			<div class="rating">
 
@@ -52,6 +51,9 @@
       				{{/if}}
       			</p>
 	     	{{/if}}
+
 	    </div>
+
+	    <p id="page"> Page : {{page}} </p>
 
     </article>
