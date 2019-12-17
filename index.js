@@ -3,7 +3,6 @@ const hbs = require('express-handlebars');
 const session = require('express-session');
 const app = express();
 const db = require('./server/db')
-const connection = require('./server/db.js');
 const passport = require('passport');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
@@ -95,22 +94,20 @@ app.get('/listing', function (req, res) {
     res.render('listing.hbs', data);
 });
 
-const recipes = [];
-
-async function f(){
-  recipes = await getRecipes(page, 2, type);
-}
-
-app.get('/listing/:type/', function (req, res) {
+app.get('/listing/:type/', async function (req, res) {
 
   let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cupcakes', 'biscuits', 'smoothies'];
  
+  let type = req.params.type;
+  let recipes = await db.getRecipes(1, 1, type);
+
+  console.log("Recipes: "+recipes);
+
   if (listingArray.indexOf(req.params.type) == -1) {
 
     let data = {
       title: 'Index',
       user: req.user,
-      recipes,
     }
 
     res.render('index.hbs', data);
@@ -123,40 +120,38 @@ app.get('/listing/:type/', function (req, res) {
     let data = {
       title: upperCase,
       user: req.user,
+      recipes,
     }
     res.render('listing.hbs', data);
   }
 }); 
 
-
-app.get('/listing/:type/:page', function (req, res) {
+app.get('/listing/:type/:page', async function (req, res) {
 
   let listingArray = ['tartes', 'cookies', 'chocolat', 'glaces', 'macarons', 'entremets', 'cupcakes', 'biscuits', 'smoothies'];
 
   let page = req.params.page;
-  /*let recipes = await getRecipes(page, 2, type);*/
+  let type = req.params.type;
+  let recipes = await db.getRecipes(page, 1, type);
 
-  console.log("listing "+page);
-  console.log(recipes);
+  console.log("Page: "+page);
+  console.log("Recipes: "+recipes);
 
   if (listingArray.indexOf(req.params.type) == -1) {
 
     let data = {
       title: 'Index',
       user: req.user,
-      recipes,
     }
 
     res.render('index.hbs', data);
 
   } else {
 
-    //Solution pas très élégante, autre manière de faire ?
-    const upperCase = req.params.type.charAt(0).toUpperCase() + req.params.type.substring(1);
-
     let data = {
-      title: upperCase,
+      title: type,
       user: req.user,
+      recipes,
     }
     res.render('listing.hbs', data);
   }
