@@ -16,5 +16,9 @@
 	align-items: center; /* alignment along cross axis */
 	align-content: center;
 
+}
 
+#photo {
+	width:30%;
+  height:30%;
 }

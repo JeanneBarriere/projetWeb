@@ -24,6 +24,7 @@ form.addEventListener("submit", function (e) {
     ajax.post('/createRecipe',
     {title,category,rating,time,backingTime,tools,ingredients,steps,date},
     function(response){
+      alert ('Merci pour cette recette, elle sera vérifiée puis prochainement mise en ligne')
       document.location.href="/index";
     },
     function(){
