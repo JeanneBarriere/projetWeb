@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 
- <head>
-   <meta charset="utf-8">
-   <title>{{ title }}</title>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ title }}</title>
 
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/font.css" />
@@ -44,38 +44,45 @@
  					</ul>
  			</li>
 
-      {{# if user}}
- 			<li><a href="/newRecipe">Nouvelle recette</a></li>
-      {{ else }}
-      <li onclick="connectforrecipe()"><a href=#>Nouvelle recette</a></li>
-      {{/if}}
- 			<!-- <li><a href="#">Forum</a></li> -->
- 		</ul>
+      <img src="/images/logoCupcake.png" alt="logoCupcake" title="logoCupcake" class="logo"/>
+
+      <h1> CooKieJar </h1>
 
  	<!-- <div class="search">
  			<label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
  	</div> -->
 
-  {{# if user}}
-    <ul id="connexion">
-      <li><a href="/profil">{{user.pseudo}}</a></li>
-      <li id="logout"><a href=#>Déconnexion</a></li>
-      <script src="/js/logOut.js"></script>
-    </ul>
-  {{ else }}
-    <ul id="connexion">
-      <li><a href="/logIn">Se connecter</a></li>
-      <li><a href="/signUp">S'inscrire</a></li>
-    </ul>
-  {{/if}}
+        {{# if user}}
+   			<li><a href="/newRecipe">Nouvelle recette</a></li>
+        {{ else }}
+        <li onclick="connectforrecipe()"><a href=#>Nouvelle recette</a></li>
+        {{/if}}
+   			<!-- <li><a href="#">Forum</a></li> -->
+      </ul>
 
+     	<div class="search">
+     		<label for="first">   <i class="fas fa-search"></i>  </label><input name="first" id="first">
+     	</div>
 
-   </header>
-   {{{ body }}}
-   <footer>
+      {{# if user}}
+        <ul id="connexion">
+          <li><a href="/profil">{{user.pseudo}}</a></li>
+          <li id="logout"><a href=#>Déconnexion</a></li>
+          <script src="/js/logOut.js"></script>
+        </ul>
+      {{ else }}
+        <ul id="connexion">
+          <li><a href="/logIn">Se connecter</a></li>
+          <li><a href="/signUp">S'inscrire</a></li>
+        </ul>
+      {{/if}}
 
-   </footer>
+    </header>
 
+    {{{ body }}}
 
- </body>
+    <footer>
+    </footer>
+
+  </body>
 </html>
