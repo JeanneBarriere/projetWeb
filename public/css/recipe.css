@@ -23,8 +23,10 @@ article{
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
-	background: #fcf5e8;
-	border-radius: 1em;
+	border: solid 1px #EFE9EE;
+	border-radius: 0.2em;
+	box-shadow: inset  -3px -3px 5px 2px #EFE9EE, inset 3px 3px 5px 2px #EFE9EE;
+	padding: 10px;
 }
 
 #top {
@@ -36,14 +38,13 @@ article{
 
 #general {
 	display: flex;
-	align-items: center;
-	justify-content: flex-start;
+	flex-direction: column;
 	background-color: white;
 	border-radius: 1em;
 	margin: 10px 10px 10px 10px;
-	border: solid 2px #F63471;
+	border: solid 1.5px #F63471;
 	box-shadow: 0px 1px 3px #EFE9EE;
-	height: 100px;
+	padding: 20px;
 }
 
 #general p {
@@ -59,14 +60,18 @@ article{
 	box-sizing: border-box;
 }
 
+
 .empty {
 	color: Gold;
 	height: 20px;
 	width: 20px;
+	transition: all 0.3s 50ms;
 }
 
 .empty:hover {
 	cursor: pointer;
+	height: 25px;
+	width: 25px;
 }
 
 .filled {
@@ -84,17 +89,16 @@ article{
 
 #ingredient {
 	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 	align-self: flex-start;
 	border-radius: 1em;
 	margin: 10px 10px 10px 10px;
 	width: 300px;
 	box-shadow: 0px 1px 3px #EFE9EE;
-	border: solid 2px #F63471;
+	border: solid 1.5px #F63471;
 	background-color: white;
-}
-
-#ingredient p {
-	margin: 10px 10px 10px 10px;
+	padding: 10px;
 }
 
 .etape {
