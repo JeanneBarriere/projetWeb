@@ -10,19 +10,20 @@ form.addEventListener("submit", function (e) {
   for(var i=0; i<form.elements.length;i++){
     if(form.elements[i].value==""){alert("remplissez le formulaire");return ;}
   }
+  submit.type = "button";
     console.log(form.elements);
     var title = form.elements.title.value;
     var category = form.elements.category.value;
     //var author = user.pseudo;
     var rating = 0;
     var time = form.elements.time.value;
-    var backingTime = form.elements.backingTime.value;
+    var bakingTime = form.elements.backingTime.value;
     var tools = form.elements.tools.value;
     var ingredients = form.elements.ingredients.value;
     var steps = form.elements.steps.value;
     var date = new Date();
     ajax.post('/createRecipe',
-    {title,category,rating,time,backingTime,tools,ingredients,steps,date},
+    {title,category,rating,time,bakingTime,tools,ingredients,steps,date},
     function(response){
       alert ('Merci pour cette recette, elle sera vérifiée puis prochainement mise en ligne')
       document.location.href="/index";

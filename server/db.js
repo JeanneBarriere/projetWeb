@@ -89,16 +89,29 @@ async function getRecipes(pageNumber, pageSize, type){
 	.find({category : type})
 	.skip((pageNumber - 1) * pageSize)
 	.limit(pageSize)
-
 	return recipes;
+}
+
+async function getOneRecipe(type){
+
+	const recipe = await Recipe
+	.find({title : type})
+	return recipe;
+}
+
+async function removeRecipe(id) {
+  const result = await Recipe.deleteOne({_id: id});
+  // indicates the number of deleted documents
+  console.log("La recette a été supprimée :"+result);
 }
 
  mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
  	.then(function() {
 		console.log('now connected to mongodb!');
+		removeRecipe('5e1b55a1e16f914c6c5e1814');
 	})
 	.catch(function (err) {
 		console.log ("Erreur lors de la connection à mongodb : ", err);
  	})
 
-	module.exports = {createUser, getUsers, removeUser, User, createRecipe, getRecipes, getAllRecipes};
+	module.exports = {createUser, getUsers, removeUser, User, createRecipe, getRecipes, getAllRecipes, getOneRecipe};

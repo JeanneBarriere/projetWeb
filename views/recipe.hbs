@@ -1,90 +1,32 @@
 
   <article>
-      <h1> Gâteau au chocolat </h1>
-
-      <hr>
-      <br>
-      <br>
-
+      {{#each recipe}}
+      <h1> {{this.title}} </h1>
+      <h2> Catégorie : {{this.category}} </h2>
       <div class="recette">
+        <aside id="ingredient">
+          <p>Ingrédients : <br>
+            {{this.ingredients}}
+          </p>
+        </aside>
         <div id="top"> <!-- le haut de la page-->
 
           <img src="/images/parDefault.png" alt="imagerecette" id="photo"> </img>
 
           <aside id="general">
-
-            <div class="rating">
-
-              <p> Note :</p>
-
-                <div class="empty" name="rating" id="s1" onclick="clickstar(1);"><i class="far fa-star"></i></div>
-                <div class="empty" name="rating" id="s2" onclick="clickstar(2);"><i class="far fa-star"></i></div>
-                <div class="empty" name="rating" id="s3" onclick="clickstar(3);"><i class="far fa-star"></i></div>
-                <div class="empty" name="rating" id="s4" onclick="clickstar(4);"><i class="far fa-star"></i></div>
-                <div class="empty" name="rating" id="s5" onclick="clickstar(5);"><i class="far fa-star"></i></div>
-
-            </div>
-
-
-
             <p>
-              Difficulté : ?/5 <br><br>
-
-              Temps de préparation : ? <br><br>
-              Temps de cuisson : ? <br><br>
-
-              Outils : <br>
-
-                <ul>
-                  <li> Four </li>
-                  <li> Truc </li>
-                  <li> Machin </li>
-                </ul>
-
+              Temps de préparation : {{this.time}} minutes <br>
+              Temps de cuisson : {{this.bakingTime}}  minutes <br>
+              Outils : {{this.tools}}<br>
             </p>
-
           </aside>
-        </div>
-
-
-
-    <div id="middle"> <!-- le milieu de la page-->
-
-        <aside id="ingredient">
-
-          <p>Ingrédients : <br>
-
-            <ul>
-              <li> Farine </li>
-              <li> Sucre </li>
-              <li> beurre </li>
-            </ul>
-
-          </p>
-
-
-         </aside>
-
-
+        </div> <!-- le milieu de la page-->
         <div class="etape">
-          <p>
-            Coactique aliquotiens nostri pedites ad eos persequendos scandere clivos sublimes etiam si lapsantibus plantis fruticeta prensando vel dumos ad vertices venerint summos, inter arta tamen et invia nullas acies explicare permissi nec firmare nisu valido gressus: hoste discursatore rupium abscisa volvente, ruinis ponderum inmanium consternuntur, aut ex necessitate ultima fortiter dimicante, superati periculose per prona discedunt. <br>
-
-            Hanc regionem praestitutis celebritati diebus invadere parans dux ante edictus per solitudines Aboraeque amnis herbidas ripas, suorum indicio proditus, qui admissi flagitii metu exagitati ad praesidia descivere Romana. absque ullo egressus effectu deinde tabescebat immobilis.
-          </p>
-
+          <h3>Etapes :</h3>
+          <pre>
+            {{this.steps}}
+          </pre>
         </div>
     </div>
-
-
-    <div id="bottom"> <!-- le bas de la page-->
-      <div id="commentaire"> What do you think?!</div>
-    </div>
-
-      </div>
-
+{{/each}}
   </article>
-
-  <footer>
-
-  </footer>

@@ -160,10 +160,13 @@ app.get('/listing/:type/:page', async function (req, res) {
   }
 });
 
-app.get('/recipe', function (req, res) {
+app.get('/recipe/:type', async function (req, res) {
+  let type = req.params.type;
+  let recipe = await db.getOneRecipe(type);
   let data = {
     title: 'Recettes',
     user:req.user,
+    recipe
   }
   res.render('recipe.hbs', data);
 });

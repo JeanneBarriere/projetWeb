@@ -1,195 +1,122 @@
 h1 {
 	color: #6E3E28;
 	font-family: "berkshire";
-	margin: 10px 10px 10px 10px;
-
+	margin: 10px 10px 10px;
+	font-size: 3em;
 }
 
 hr {
-
 	margin: solid green 20px;
   	border-style: solid;
   	border-width: 1px;
   	color: #F63471;
   	box-shadow: 0px 0px 0px #6E3E28;
-
 }
 
 article{
 	background: white;
-
 }
 
 
 .recette {
-
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
+	flex-direction: column;
 	align-items: center;
 	align-content: center;
-
+	background: #fcf5e8;
+	border-radius: 1em;
 }
 
 #top {
-
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
+	justify-content: column;
 	align-items: center;
 	align-content: center;
-
-	height: 350px;
-
-}
-
-#photo {
-
-	box-sizing: border-box;
-	margin: 10px 10px 10px 10px;
-
-	border-radius: 3%;
-
-	width: 300px;
-	height: 300px;
-
 }
 
 #general {
-
 	display: flex;
-	flex-flow: column nowrap;
+	align-items: center;
 	justify-content: flex-start;
-	align-items: flex-start;
-	align-content: flex-start;
-
-	box-sizing: border-box;
-	border-radius: 3%;
-
+	background-color: white;
+	border-radius: 1em;
 	margin: 10px 10px 10px 10px;
-	border: solid 3px #F63471;
-
-
-
-	/*background: #99093b; */
-
-
-
-	height: 300px;
-
+	border: solid 2px #F63471;
+	box-shadow: 0px 1px 3px #EFE9EE;
+	height: 100px;
 }
 
 #general p {
-
 	margin: 10px 10px 10px 10px;
-
 }
 
 .rating {
-
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-start;
 	align-items: center;
 	align-content: flex-start;
-
 	box-sizing: border-box;
-
 }
 
-
-
 .empty {
-
 	color: Gold;
 	height: 20px;
 	width: 20px;
-
 }
 
 .empty:hover {
-
 	cursor: pointer;
-
 }
 
 .filled {
 	color: Gold;
-
 	height: 20px;
 	width: 20px;
-
 }
 
 #middle {
-
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
 	align-items: center;
-	align-content: center;
-
 	height: 400px;
-
+	border: solid 2px black;
 }
 
 #ingredient {
-
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: flex-start;
-	align-content: flex-start;
-
-	box-sizing: border-box;
-
-	border-radius: 3%;
-
+	align-self: flex-start;
+	border-radius: 1em;
 	margin: 10px 10px 10px 10px;
-
-	background: #af75a4;
-
-	height: 300px;
 	width: 300px;
-
+	box-shadow: 0px 1px 3px #EFE9EE;
+	border: solid 2px #F63471;
+	background-color: white;
 }
 
 #ingredient p {
-
 	margin: 10px 10px 10px 10px;
-
 }
 
 .etape {
-
  	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-items: flex-start;
-	align-content: flex-start;
-
-	border-radius: 3%;
-
-	margin: 10px 10px 10px 10px;
-
-	background: pink;
-
-
+	flex-direction: column;
+	border-radius: 1em;
+	margin: 10px 30px 10px 30px;
+	background: #FFF1FF;
+	padding: 10px;
+	  box-shadow: 0px 1px 3px #EFE9EE;
 }
 
-.etape p {
-
+.etape pre {
 	margin: 10px 10px 10px 10px;
-
+	white-space:pre-line;
+	font-family: Calibri;
 }
 
 #bottom {
-
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: flex-start;
 	align-items: center;
 	align-content: center;
-
-
 }
