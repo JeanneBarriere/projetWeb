@@ -1,6 +1,7 @@
 
   <article>
       {{#each recipe}}
+      {{#if this.published}}
       <h1> {{this.title}} </h1>
       <h2> Catégorie : {{this.category}} </h2>
       <div class="recette">
@@ -35,5 +36,6 @@
           </pre>
         </div>
     </div>
+    {{/if}}
 {{/each}}
   </article>

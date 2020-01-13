@@ -7,6 +7,7 @@
 
      		{{#if recipes}}
      		{{#each recipes}}
+				{{#if this.published}}
 
 	     	<div class="listItem">
 					<a href="/recipe/{{this.title}}">
@@ -24,6 +25,7 @@
 		        </div>
 					</a>
 	     	</div>
+				{{/if}}
 	     	{{/each}}
 
 	     	{{else}}

@@ -56,6 +56,7 @@ const recipeSchema = new mongoose.Schema({
 	ingredients: String,//tab
 	steps: String,//tab
 	date: Date,
+	published: Boolean,
 });
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
@@ -73,6 +74,7 @@ async function createRecipe(recipeData) {
 	ingredients: recipeData.ingredients,
 	steps: recipeData.steps,
 	date: recipeData.date,
+	published: recipeData.published,
 	})
 	const result = await recipe.save();
 	console.log(result);
