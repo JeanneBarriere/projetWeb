@@ -1,8 +1,8 @@
 h1 {
 	color: #6E3E28;
 	font-family: "berkshire";
-	margin: 10px 10px 10px;
-	font-size: 3em;
+	margin: 0px 10px 10px;
+	font-size: 2em;
 }
 
 hr {
@@ -16,7 +16,6 @@ hr {
 article{
 	background: white;
 }
-
 
 .recette {
 	display: flex;
@@ -82,38 +81,38 @@ article{
 
 #middle {
 	display: flex;
+	flex-flow: column nowrap;
 	align-items: center;
 	height: 400px;
-	border: solid 2px black;
+	margin: 10px 10px 10px 10px;
+	/*border: solid 2px black;*/
 }
 
-#ingredient {
+#ingredients {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	align-self: flex-start;
 	border-radius: 1em;
-	margin: 10px 10px 10px 10px;
-	width: 300px;
-	box-shadow: 0px 1px 3px #EFE9EE;
-	border: solid 1.5px #F63471;
-	background-color: white;
+	margin: 10px 30px 10px 30px;
+	background: #FFF1FF;
 	padding: 10px;
+	box-shadow: 0px 1px 3px #EFE9EE;
+	width: 100%;
 }
 
-.etape {
+.steps {
  	display: flex;
 	flex-direction: column;
 	border-radius: 1em;
 	margin: 10px 30px 10px 30px;
 	background: #FFF1FF;
 	padding: 10px;
-	  box-shadow: 0px 1px 3px #EFE9EE;
+	box-shadow: 0px 1px 3px #EFE9EE;
+	width: 100%;
 }
 
-.etape pre {
-	margin: 10px 10px 10px 10px;
-	white-space:pre-line;
+pre {
+	margin: 0px 10px 10px 10px;
+	white-space: pre-line;
 	font-family: Calibri;
 }
 

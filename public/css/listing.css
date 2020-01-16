@@ -32,12 +32,12 @@ h3 {
 #photo {
 	border: solid 2px #FFF1FF;
 	width: 200px;
-  height: 200px;
+  	height: 200px;
 	border-radius: 1em;
 	margin: 10px;
 
 }
 
 #page {
-
+	align-self: center;
 }

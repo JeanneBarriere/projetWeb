@@ -3,13 +3,17 @@
 		<img src="/images/macarons.jpg" alt="macarons" class="horizontal"/>
   		<article>
 
-			{{# if user}}
-				<p class="text"> Bonjour {{user.firstName}} ! Que cherchez-vous aujourd'hui ? </p>
-			{{/if}}
+			<p class="text">
 
-			<p class="text">Bienvenue sur notre site de <strong>recettes de patisserie</strong> ! N'hésitez pas à choisir une <strong>catégorie</strong> de recettes ci-dessous :</p>
+				{{# if user}}
+				Bonjour {{user.firstName}} ! Que cherchez-vous aujourd'hui ?<br><br>
+				{{else}}
+				Bienvenue sur notre site de <strong>recettes de patisserie</strong> !<br><br>
+				{{/if}}
 
-			<div class="Andy">
+				N'hésitez pas à choisir une <strong>catégorie</strong> de recettes ci-dessous :</p>
+
+			<div class="categories">
 
 				<div class="row">
 					<div class='capsule'><a href="/listing/tartes"><div id="box1" class="box">

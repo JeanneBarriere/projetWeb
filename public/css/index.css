@@ -1,5 +1,5 @@
 
-.Andy { /* Grand carré qui contient les 9 petits carrés */
+.categories { /* Grand carré qui contient les 9 petits carrés */
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -63,10 +63,10 @@
 	opacity: 1;
 	transform: scale(1.05);
 }
+
 #box1 {
   background-image: url("../images/tarteFraise.jpg");
 }
-
 
 #box2 {
   background-image: url("../images/cookies.jpg");

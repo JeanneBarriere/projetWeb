@@ -32,7 +32,7 @@ app.set('view engine', 'hbs');
 app.get('/profil', function (req, res) {
   let data = {
     title: 'CooKieJar - Profil',
-    user:req.user,
+    user: req.user,
   }
   res.render('profil.hbs',data);
 });
@@ -40,7 +40,8 @@ app.get('/profil', function (req, res) {
 app.get('', function (req, res) {
   let data = {
     title: 'CooKieJar - Accueil',
-    user:req.user,
+    user: req.user,
+    index: true
   }
   res.render('index.hbs', data);
 });
@@ -49,7 +50,7 @@ app.get('', function (req, res) {
 app.get('/confirmedRegistration', function (req, res) {
   let data = {
     title: 'CooKieJar - Nouvelle inscription',
-    user:req.user,
+    user: req.user,
   }
   res.render('confirmedRegistration.hbs', data);
 });
@@ -57,7 +58,8 @@ app.get('/confirmedRegistration', function (req, res) {
 app.get('/index', function (req, res) {
   let data = {
     title: 'CooKieJar - Accueil',
-    user:req.user,
+    user: req.user,
+    index: true
   }
   res.render('index.hbs', data);
 });
@@ -65,7 +67,8 @@ app.get('/index', function (req, res) {
 app.get('/signUp', function (req, res) {
   let data = {
     title: 'CooKieJar - Inscription',
-    user:req.user,
+    user: req.user,
+    signUp: true
   }
   res.render('signUp.hbs', data);
 });
@@ -73,7 +76,8 @@ app.get('/signUp', function (req, res) {
 app.get('/LogIn', function (req, res) {
   let data = {
     title: 'CooKieJar - Connexion',
-    user:req.user,
+    user: req.user,
+    logIn: true
   }
   res.render('logIn.hbs', data);
 });
@@ -81,7 +85,8 @@ app.get('/LogIn', function (req, res) {
 app.get('/newRecipe', function (req, res) {
   let data = {
     title: 'CooKieJar - Nouvelle recette',
-    user:req.user,
+    user: req.user,
+    newRecipe: true
   }
   res.render('newRecipe.hbs', data);
 });
@@ -99,6 +104,7 @@ app.get('/listing/:type/', async function (req, res) {
     let data = {
       title: 'CooKieJar - Accueil',
       user: req.user,
+      index: true
     }
 
     res.render('index.hbs', data);
@@ -109,7 +115,7 @@ app.get('/listing/:type/', async function (req, res) {
     type = req.params.type.charAt(0).toUpperCase() + req.params.type.substring(1);
 
     let data = {
-      title: "CooKieJar - "+type,
+      title: 'CooKieJar - '+type,
       user: req.user,
       type,      
       page,
@@ -127,14 +133,15 @@ app.get('/listing/:type/:page', async function (req, res) {
   let type = req.params.type;
   let recipes = await db.getRecipes(page, 3, type);
 
-  console.log("Page: "+page);
-  console.log("Recipes: "+recipes);
+  console.log('Page: '+page);
+  console.log('Recipes: '+recipes);
 
   if (listingArray.indexOf(req.params.type) == -1) {
 
     let data = {
       title: 'CooKieJar - Accueil',
       user: req.user,
+      index: true
     }
 
     res.render('index.hbs', data);
@@ -142,7 +149,7 @@ app.get('/listing/:type/:page', async function (req, res) {
   } else {
 
     let data = {
-      title: "CooKieJar - "+type,
+      title: 'CooKieJar - '+type,
       user: req.user,
       type,
       page,
@@ -152,12 +159,12 @@ app.get('/listing/:type/:page', async function (req, res) {
   }
 });
 
-app.get('/recipe/:type', async function (req, res) {
-  let type = req.params.type;
-  let recipe = await db.getOneRecipe(type);
+app.get('/recipe/:name', async function (req, res) {
+  let name = req.params.name;
+  let recipe = await db.getOneRecipe(name);
   let data = {
-    title: 'CooKieJar - Recettes',
-    user:req.user,
+    title: 'CooKieJar - '+name,
+    user: req.user,
     recipe
   }
   res.render('recipe.hbs', data);

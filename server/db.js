@@ -6,7 +6,7 @@ const user_name = 'user_project_' + project_number;
 const mongoose = require('mongoose');
 const uri = "mongodb+srv://chifaawehbe:"+ pwd + "@chifaa-vz6hq.mongodb.net/test?retryWrites=true&w=majority";
 
-//LES utilisateur
+//Les utilisateurs
 const userSchema = new mongoose.Schema({
 	firstName: String,
 	lastName: String,
@@ -43,11 +43,11 @@ async function removeUser(id) {
   console.log("L'utilisateur a été supprimé :"+result);
 }
 
-// LES RECETTES
+// Les recettes
 const recipeSchema = new mongoose.Schema({
 	title: String,
 	category: String,
-//	author: String,
+	//author: String,
 	rating: Number, //tab
 	time: Number,
 	bakingTime: Number,
@@ -82,22 +82,22 @@ async function createRecipe(recipeData) {
 
 async function getAllRecipes(){
 	const allRecipes = await Recipe.find();
-  return allRecipes;
+  	return allRecipes;
 }
 
 async function getRecipes(pageNumber, pageSize, type){
 
 	const recipes = await Recipe
-	.find({category : type})
+	.find({category: type, published: true})
 	.skip((pageNumber - 1) * pageSize)
 	.limit(pageSize)
 	return recipes;
 }
 
-async function getOneRecipe(type){
+async function getOneRecipe(name){
 
 	const recipe = await Recipe
-	.find({title : type})
+	.find({title: name, published: true})
 	return recipe;
 }
 
@@ -107,7 +107,7 @@ async function removeRecipe(id) {
   console.log("La recette a été supprimée :"+result);
 }
 
- mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
  	.then(function() {
 		console.log('now connected to mongodb!');
 		removeRecipe('5e1b55a1e16f914c6c5e1814');
@@ -116,4 +116,4 @@ async function removeRecipe(id) {
 		console.log ("Erreur lors de la connection à mongodb : ", err);
  	})
 
-	module.exports = {createUser, getUsers, removeUser, User, createRecipe, getRecipes, getAllRecipes, getOneRecipe};
+module.exports = {createUser, getUsers, removeUser, User, createRecipe, getRecipes, getAllRecipes, getOneRecipe};
